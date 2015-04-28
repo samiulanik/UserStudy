@@ -1,0 +1,4 @@
+{"answers": "t112 t37 t94 t95 t79 t101 t102", "time": 30.423999999999978}
+{"task": 2, "participantId": 1, "system": "categorization", "answers": "t24 t45 t46 t94 t95 t79 t101 t102", "video": "two", "time": 19.12099999999998}
+{"task": 3, "participantId": 1, "system": "categorization", "answers": "t44 t52 t103 t95 t94 t79 t101 t102", "video": "two", "time": 14.317999999999984}
+{"task": 1, "participantId": 1, "system": "categorization", "answers": "t37 t94 t95 t71", "video": "two", "time": 77.719}

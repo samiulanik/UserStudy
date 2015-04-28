@@ -980,19 +980,19 @@
 
             var send = JSON.stringify({participantId: 1, system: "categorization", video:"two", task:1 ,time: requiredTime, answers: answerList.join(' ')});
             //console.log(requiredTime+" "+answerList);
-            $.ajax({
-                url: '/saveLog',
-                type: 'POST',
-                data: send,
-                contentType: "application/json",
-                dataType: 'json',
-                success: function(response) {
-                    console.log(response);
-                },
-                error: function(error) {
-                    console.log(error);
-                }
-            });
+            // $.ajax({
+            //     url: '/saveLog',
+            //     type: 'POST',
+            //     data: send,
+            //     contentType: "application/json",
+            //     dataType: 'json',
+            //     success: function(response) {
+            //         console.log(response);
+            //     },
+            //     error: function(error) {
+            //         console.log(error);
+            //     }
+            // });
 
         }
 
