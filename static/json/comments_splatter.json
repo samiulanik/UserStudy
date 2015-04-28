@@ -1,0 +1,941 @@
+[
+    {
+        "userName": "MM",
+        "time": -1,
+        "text": "VERY COOL!",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se1"
+    },
+    {
+        "userName": "K",
+        "time": -1,
+        "text": "Good tut as always Marty, i just neeed now to learn some way to make a  person look like it's becoming smoke, to remove my lame profile picture, i  hope you do some tut like that in the future!",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se2"
+    },
+    {
+        "userName": "OO",
+        "time": -1,
+        "text": "Thanks for TUT!",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se3"
+    },
+    {
+        "userName": "NA",
+        "time": -1,
+        "text": "thnx :)",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se4"
+    },
+    {
+        "userName": "Z",
+        "time": -1,
+        "text": "Marty is the best!",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se5"
+    },
+    {
+        "userName": "DMH",
+        "time": -1,
+        "text": "thanks you !!!! I like it",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se6"
+    },
+    {
+        "userName": "LD",
+        "time": -1,
+        "text": "I feel bad for not leaving comments on ALL your tutorials Marty because each and every one is really helpful. Thanks very much and keep them  coming.",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se7"
+    },
+    {
+        "userName": "LD",
+        "time": -1,
+        "text": "I feel bad for not leaving comments on ALL your tutorials Marty because  each and every one is really helpful. Thanks very much and keep them  coming. ",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se8"
+    },
+    {
+        "userName": "PS",
+        "time": -1,
+        "text": "awesome !!",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se9"
+    },
+    {
+        "userName": "CA",
+        "time": -1,
+        "text": "fantástico,parabéns ",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se10"
+    },
+    {
+        "userName": "LC",
+        "time": -1,
+        "text": "Great techniques",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se11"
+    },
+    {
+        "userName": "IK",
+        "time": -1,
+        "text": "as always great Marty.. =D ",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se12"
+    },
+    {
+        "userName": "HB",
+        "time": -1,
+        "text": "I don't have blur?",
+        "type": "question",
+        "contentPosition": "none",
+        "commentId": "se13"
+    },
+    {
+        "userName": "PM",
+        "time": -1,
+        "text": "Keep getting told its not available on iPad :(",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se14"
+    },
+    {
+        "userName": "B",
+        "time": -1,
+        "text": "that photo is so (sunglasses) BAD bASS  WWWWWWHHHHHHAAAAAAAAAAAAAAAAAAAAAAAAAA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se15"
+    },
+    {
+        "userName": "BLT",
+        "time": -1,
+        "text": "Paul Mullins...The devices that don't support monetization, don't support  my efforts, financially. Therefore, they will no longer appear on devices  that aren't \"monetized\". My revenue is generated from each view via the ads  placed at the beginning of each tutorial by Google Adsense. Examples of  monetized platforms are YouTube(dot)com & YT native apps on Android, Xbox &  GoogleTV. ",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se17"
+    },
+    {
+        "userName": "RP",
+        "time": -1,
+        "text": "very nice ! thank you mate ! :)",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se18"
+    },
+    {
+        "userName": "BLT",
+        "time": -1,
+        "text": "Haris Brkic...The selection surrounding your subject must be on the  original photo & the selection must be expanded enough. ",
+        "type": "question",
+        "contentPosition": "none",
+        "commentId": "se19"
+    },
+    {
+        "userName": "JM",
+        "time": 230,
+        "text": "It won't let the splatter 1 brush load. It says \"could not load the brushes  because an unexpected end-of-file was encountered.\" please help me ",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se20"
+    },
+    {
+        "userName": "BLT",
+        "time": 230,
+        "text": "Jan Marie...The Splatter 2 brush download on my end works fine.",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se21"
+    },
+    {
+        "userName": "M",
+        "time": -1,
+        "text": "Could you show us how to make a war propaganda poster?",
+        "type": "question",
+        "contentPosition": "none",
+        "commentId": "se22"
+    },
+    {
+        "userName": "K",
+        "time": -1,
+        "text": "I having wrong color output when i am printing. I always get nice result in  PowerPoint software but not in PS. What color profile i needed to choose  when i want to print this project? Thank for help :)",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se23"
+    },
+    {
+        "userName": "JM",
+        "time": -1,
+        "text": "what's the problem with mine? sorry for bothering you",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se24"
+    },
+    {
+        "userName": "A",
+        "time": -1,
+        "text": "can u send me the link of photo plzz ",
+        "type": "question",
+        "contentPosition": "none",
+        "commentId": "se25"
+    },
+    {
+        "userName": "BO",
+        "time": 136,
+        "text": "i dont have \"content aware\" im using PS CS4, please help!",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se26"
+    },
+    {
+        "userName": "BLT",
+        "time": 136,
+        "text": "borjeez...Content aware is not available in versions under CS5.",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se27"
+    },
+    {
+        "userName": "UU",
+        "time": 136,
+        "text": "Where is content aware in my fill? I can't find it!! please help me I am using PSE 11 ",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se28"
+    },
+    {
+        "userName": "BO",
+        "time": -1,
+        "text": "thank you,anyways. keep up the good tutorial! more power BlueLightning Tv,  from Philippines..",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se29"
+    },
+    {
+        "userName": "OJ",
+        "time": 136,
+        "text": "When I try to fill it it says this.. \"Could not fill because there's not  enough data to fill it in a Content-Aware manner\" What am I doing wrong?  Thanks",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se30"
+    },
+    {
+        "userName": "BLT",
+        "time": 136,
+        "text": "ollie jones...make sure your background copy layer is active.",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se31"
+    },
+    {
+        "userName": "BLT",
+        "time": -1,
+        "text": "Lloyd Deevy...Your comments are welcomed!",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se32"
+    },
+    {
+        "userName": "HC",
+        "time": -1,
+        "text": "All your videos helped me a lot.. Thank you Marty.. Best of luck for your  future :)",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se33"
+    },
+    {
+        "userName": "ND",
+        "time": -1,
+        "text": "Thanx a lot sir for your Tuts, they are very helpful for passionate  designers like me, always driven to learn more and new things.",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se34 "
+    },
+    {
+        "userName": "A",
+        "time": -1,
+        "text": "i need that photo plzz ",
+        "type": "question",
+        "contentPosition": "none",
+        "commentId": "se35"
+    },
+    {
+        "userName": "SS",
+        "time": -1,
+        "text": "Tnx for excellent tutorial. Can you post link of image which you use in  this tutorial?",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se36"
+    },
+    {
+        "userName": "BLT",
+        "time": -1,
+        "text": "Stefan Stankovic...The link for the image is located in the video's  description.",
+        "type": "question",
+        "contentPosition": "none",
+        "commentId": "se37"
+    },
+    {
+        "userName": "KL",
+        "time": 136,
+        "text": "can't fill it dammit!",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se38"
+    },
+    {
+        "userName": "KK",
+        "time": -1,
+        "text": "the clearest and best tutorial for me...thanks! ",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se39"
+    },
+    {
+        "userName": "MDL",
+        "time": 294,
+        "text": "Sir how did the spatter blend with the musician? Can't really get it. ",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se40"
+    },
+    {
+        "userName": "BW",
+        "time": -1,
+        "text": "So glad i signed up to your uploads marty, clear concise, informative and  fun, i have learnt more from your tutorials than any other, thank you.",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se41"
+    },
+    {
+        "userName": "TL",
+        "time": 136,
+        "text": "my photo shop is cs3 and i don't have Content-Aware so what do i do",
+        "type": "question",
+        "contentPosition": "none",
+        "commentId": "se42"
+    },
+    {
+        "userName": "BLT",
+        "time": 136,
+        "text": "Lian Thawn...Use other tools like Clone Stamp, Patch & Healing brushes.",
+        "type": "question",
+        "contentPosition": "none",
+        "commentId": "se43"
+    },
+    {
+        "userName": "CN",
+        "time": 230,
+        "text": "no brush splatter 2 sir :( help please",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se44"
+    },
+    {
+        "userName": "CN",
+        "time": -1,
+        "text": "ITS REALLY HELPING :) ",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se45"
+    },
+    {
+        "userName": "VS",
+        "time": -1,
+        "text": "Like the way u explain.... awesome :)",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se46"
+    },
+    {
+        "userName": "JV",
+        "time": -1,
+        "text": "Hello, Blue Lightning TV! I have a question, why are you so awesome??! :)  :D I always refer to your videos and they are really helpful!",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se47"
+    },
+    {
+        "userName": "BLT",
+        "time": -1,
+        "text": "Janela...Thanks for spreading the word about BLTV! :-D",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se48"
+    },
+    {
+        "userName": "RG",
+        "time": 230,
+        "text": "i dont have splatter.can you suggest anyother brushes like that",
+        "type": "question",
+        "contentPosition": "none",
+        "commentId": "se49"
+    },
+    {
+        "userName": "BLT",
+        "time": 230,
+        "text": "rahul g...As I mentioned in the tut, go to brusheezy(dot)com or other  Photoshop brush websites to download splatter brushes. There are many from  which to choose.",
+        "type": "question",
+        "contentPosition": "none",
+        "commentId": "se50"
+    },
+    {
+        "userName": "AK",
+        "time": -1,
+        "text": "best photoshop video\"s ever",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se51"
+    },
+    {
+        "userName": "H",
+        "time": -1,
+        "text": "took me hours to figure but i got it... thank you. ",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se52"
+    },
+    {
+        "userName": "DLK",
+        "time": -1,
+        "text": "Umm will all of this work the same way on my photoshop cs5 ?",
+        "type": "question",
+        "contentPosition": "none",
+        "commentId": "se53"
+    },
+    {
+        "userName": "BLT",
+        "time": -1,
+        "text": "Katie Aurora...It's been a while since I worked in CS5, but I think it'll  work the same.",
+        "type": "question",
+        "contentPosition": "none",
+        "commentId": "se54"
+    },
+    {
+        "userName": "AP",
+        "time": -1,
+        "text": "Amazing marty , thank you very mach from finland",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se55"
+    },
+    {
+        "userName": "BLT",
+        "time": -1,
+        "text": "annooz patrick...Thanks. FYI: My recent tutorials have been transcribed for language translation. If the tutorial has a \"CC\" icon next to it, it means  it's been correctly transcribed into English. Simply click on the  \"captions\" icon at the bottom of the video and then click \"Finnish\" for its  translation!",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se56"
+    },
+    {
+        "userName": "AP",
+        "time": -1,
+        "text": "Thanks for your answer marty,you are now international lecturer in  photoshop and the best too , thank you so mach for your geniality",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se57"
+    },
+    {
+        "userName": "RJ",
+        "time": -1,
+        "text": "GBU marty very very helpful",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se58"
+    },
+    {
+        "userName": "A",
+        "time": -1,
+        "text": "Did you hear regarding Photo Ultimate Kits yet? My good friend first got it  and he has changed into a photoshop guru in a single day. Search for it on  google. ",
+        "type": "suggestion",
+        "contentPosition": "None",
+        "commentId": "se59"
+    },
+    {
+        "userName": "HM",
+        "time": 140,
+        "text": "after followinng each step for some reason the fill selection is not  availible for me to click. what did i do wrong",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se60"
+    },
+    {
+        "userName": "WV",
+        "time": -1,
+        "text": "amazing tutorials as always ",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se61"
+    },
+    {
+        "userName": "JVDL",
+        "time": -1,
+        "text": "Thanks Marty, BIG thumbs up for this video!!",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se62"
+    },
+    {
+        "userName": "JG",
+        "time": 306,
+        "text": "The white brush isn't working on the liguify layer so its not revealing the  liquified layer",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se63"
+    },
+    {
+        "userName": "TS",
+        "time": -1,
+        "text": "I love you Marty you are simply fantastic",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se64"
+    },
+    {
+        "userName": "TS",
+        "time": 306,
+        "text": "i am following all the steps but when i reach the last step where you use  the brushes to view the liquefied part nothing is coming up.i have tried to  switch the colors still nothing is showing up.please help!!. ",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se65"
+    },
+    {
+        "userName": "IH",
+        "time": -1,
+        "text": "it's finally ok, i just had to swap color ",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se66"
+    },
+    {
+        "userName": "JDG",
+        "time": -1,
+        "text": "My family laughed when I told them I was going to shed fat with Stupid  Simple Slimming, but then they saw the results. Google Stupid Simple  Slimming to see their reaction. (You should see their shock!)",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se67"
+    },
+    {
+        "userName": "VJ",
+        "time": 115,
+        "text": "I did it thanx.. but sometimes \"fill option\" doesnt show up when im doing  the same wid different pics :( wats the reason?? .. please slove the  issue.. thanx",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se68"
+    },
+    {
+        "userName": "B",
+        "time": -1,
+        "text": "thank you!!! I'd like to show you I made my picture :DDDDD",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se69"
+    },
+    {
+        "userName": "MV",
+        "time": -1,
+        "text": "Marty , could you please make a .zip of all of your brushes? ",
+        "type": "question",
+        "contentPosition": "none",
+        "commentId": "se70"
+    },
+    {
+        "userName": "AC",
+        "time": -1,
+        "text": "Marty you are a good teacher. Thank you Guru.",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se71"
+    },
+    {
+        "userName": "MS",
+        "time": 136,
+        "text": "It won't let me fill!!!",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se72"
+    },
+    {
+        "userName": "R",
+        "time": -1,
+        "text": "Your vids are the clearest on the net Marty. Hands down.",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se73"
+    },
+    {
+        "userName": "TG1M",
+        "time": 40,
+        "text": "For some reason, when i select a portion of the image I want, and then make  the 2 copies and then make a copy of the background and go to control click to modify, it won't let me.",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se74"
+    },
+    {
+        "userName": "DH",
+        "time": 115,
+        "text": "Bad news. I just realized that I'm whit CS4 and I do not have content -  aware.",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se75"
+    },
+    {
+        "userName": "MD",
+        "time": -1,
+        "text": "cool",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se76"
+    },
+    {
+        "userName": "MM",
+        "time": -1,
+        "text": "THANNNNK YOU MARTY!!! YOU HAVE THE BEST VIDEOS!",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se77"
+    },
+    {
+        "userName": "HN",
+        "time": 104,
+        "text": "It does not give me the Fill Option i dont know why﻿",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se78"
+    },
+    {
+        "userName": "BLT",
+        "time": 104,
+        "text": "Make sure the correct layer in the Layers panel is active.﻿",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se100"
+    },
+    {
+        "userName": "RG",
+        "time": -1,
+        "text": "You have very usefull tutorials and explain it easy to us. Thnx Marty",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se79"
+    },
+    {
+        "userName": "J",
+        "time": 104,
+        "text": "I have this problem to i have the selection expanded and everything but  when i go to do content aware at 1:46 its greyed out so i cant use it any  suggestions?",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se80"
+    },
+    {
+        "userName": "BLT",
+        "time": 104,
+        "text": "Make sure the correct layer is active.",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se101"
+    },
+    
+    {
+        "userName": "NK",
+        "time": 230,
+        "text": "Please marty , Upload a zip file containing all your brushes.. #Request",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se81"
+    },
+    {
+        "userName": "ET",
+        "time": -1,
+        "text": "What kind of program is that? Can I use Pixlr?﻿",
+        "type": "question",
+        "contentPosition": "none",
+        "commentId": "se82"
+    },
+    {
+        "userName": "ME",
+        "time": -1,
+        "text": "MARTY! You do some GREAT tutorials!! Thanks for making this complex field  so easy.",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se83"
+    },
+    {
+        "userName": "A",
+        "time": -1,
+        "text": "What a great video! I hope i am able to do this in Elements and it looks  like I should be able too.  I can't wait to try it out.  After watching so  many super confusing videos, this is quite refreshing.",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se84"
+    },
+    {
+        "userName": "A",
+        "time": 105,
+        "text": "I use PSE11 and I don't have the option for content aware.  It gives me  black, white, or 50%.  What should I use?",
+        "type": "question",
+        "contentPosition": "none",
+        "commentId": "se85"
+    },
+    {
+        "userName": "A",
+        "time": 105,
+        "text": "I figured out why this isn't working for me.  Because I am stuck using  PSE11 and there is no content aware fill tool, it will only let me use part  of the selection because in order to fill it, I had to use the clone stamp  tool.  I guess the only option is to expand the selection further than  normal.﻿",
+        "type": "suggestion",
+        "contentPosition": "none",
+        "commentId": "se86"
+    },
+    {
+        "userName": "AK",
+        "time": 107,
+        "text": "Marty, the break down for me was the fill early in the video. The message I  got after the \"modify-expand\" section was \"X Could not fill because there  are not enough opaque source pixels.\" This happened at 1:47 in the video  stream",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se87"
+    },
+    {
+        "userName": "AK",
+        "time": 107,
+        "text": "My Paintshop dont have this fill option at all! I have no idea what to do! Plz helpppp!!",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se88"
+    },
+    {
+        "userName": "ET",
+        "time": -1,
+        "text": "AWESOME..",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se89"
+    },
+    {
+        "userName": "T",
+        "time": -1,
+        "text": "At last a Tutorial that explains in Great Detail , Thanks for the Upload  :-)",
+        "type": "appreciation",
+        "contentPosition": "se90",
+        "commentId": "se90"
+    },
+    {
+        "userName": "AIM",
+        "time": 165,
+        "text": "when i click on liquify it gives me a black screen.. 2:45 please help me  marty",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se91"
+    },
+    {
+        "userName": "K",
+        "time": -1,
+        "text": "pls help me download the splatter brush i cannot download it from your link  it jz gves me a blank window. .thanx in advance marty",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se92"
+    },
+    {
+        "userName": "BLT",
+        "time": -1,
+        "text": "The link I provided works on my end. Please try another Browser.",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se103"
+    },
+    {
+        "userName": "FN",
+        "time": 106,
+        "text": "Well... I am using photoshop middle eastern version and dont have the  content aware... now how to do it ?",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se93"
+    },
+    {
+        "userName": "EK",
+        "time": -1,
+        "text": "YOU ARE TOO MUCH",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se94"
+    },
+    {
+        "userName": "EA",
+        "time": -1,
+        "text": "This is the most awesome of all the videos on Photoshop splatter. Audio  quality was perfect and the screen clarity perfect. Thanks.",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se95"
+    },
+    {
+        "userName": "SO",
+        "time": -1,
+        "text": "waw thank you very much",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se96"
+    },
+    {
+        "userName": "HS",
+        "time": 372,
+        "text": "Hi, my brush did not give me the splatter on images . I follow all the  steps but nothing happened. ",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se97"
+    },
+    {
+        "userName": "Z",
+        "time": 278,
+        "text": "Hello, when I try to splatter, it doesn't look like yours. It just has  black spots. Theirs no color contrast. I hope that makes sense. Please  Help!!!!",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se98"
+    },
+    {
+        "userName": "WP",
+        "time": 278,
+        "text": "Hopefully you pressed on the white side of the picture layer you choose, and not THE piucture but the white picture beside it you had to make :)",
+        "type": "troubleshooting",
+        "contentPosition": "none",
+        "commentId": "se102"
+    },
+    
+    {
+        "userName": "KK",
+        "time": -1,
+        "text": "hi , I link to you are photoshop. waw thank you very much  i myanmar.",
+        "type": "appreciation",
+        "contentPosition": "none",
+        "commentId": "se99"
+    },
+
+    {
+        "userName": "S",
+        "time": 60,
+        "text": "Instead of using quick selection tool, lasso tool can also be used",
+        "type": "suggestion",
+        "contentPosition": "none",
+        "commentId": "se104"
+    },
+
+    {
+        "userName": "J",
+        "time": 180,
+        "text": "I have another suggestion, Pucker tool might produce the same result instead of forward wrap tool",
+        "type": "suggestion",
+        "contentPosition": "none",
+        "commentId": "se105"
+    },
+
+    {
+        "userName": "X",
+        "time": 92,
+        "text": "Be careful when making a copy, sometimes in different version like CS5 it creates problem. In that case you need to click the button for duplicate layer.",
+        "type": "suggestion",
+        "contentPosition": "none",
+        "commentId": "se106"
+    },
+
+     {
+        "userName": "Z",
+        "time": 95,
+        "text": "Before using modify command make sure to select something otherwise it might grayed out.",
+        "type": "suggestion",
+        "contentPosition": "none",
+        "commentId": "se107"
+    },
+
+    {
+        "userName": "Z",
+        "time": 154,
+        "text": "I found it useful to check selection options before bluring. otherwise the blur might not work.",
+        "type": "suggestion",
+        "contentPosition": "none",
+        "commentId": "se108"
+    },
+
+    {
+        "userName": "Z",
+        "time": -1,
+        "text": "Here is one tutorial on liquify https://www.youtube.com/watch?v=gmjvEwyKIi0",
+        "type": "link",
+        "contentPosition": "none",
+        "commentId": "se109"
+    },
+    {
+        "userName": "J",
+        "time": 180,
+        "text": "BTW for photoshop lightroom users, there are no liquify tool.",
+        "type": "suggestion",
+        "contentPosition": "none",
+        "commentId": "se110"
+    },
+    {
+        "userName": "K",
+        "time": -1,
+        "text": "another tutorial! https://www.youtube.com/watch?v=cbd21dGAPMM",
+        "type": "link",
+        "contentPosition": "none",
+        "commentId": "se111"
+    },
+     {
+        "userName": "L",
+        "time": 180,
+        "text": "I have a suggestion, the photoshop elements user can find liquify under filter->distort.",
+        "type": "suggestion",
+        "contentPosition": "none",
+        "commentId": "se112"
+    },
+    {
+        "userName": "M",
+        "time": -1,
+        "text": "Here is a download link for splatter brush! https://www.youtube.com/watch?v=cbd21dGAPMM",
+        "type": "link",
+        "contentPosition": "none",
+        "commentId": "se113"
+    },
+    {
+        "userName": "M",
+        "time": 256,
+        "text": "This thing can be done without using splatter brush. Instead splash image with thresholding the adjustment layer same thing can be done. I have done it in latest Photoshop CC.",
+        "type": "suggesion",
+        "contentPosition": "none",
+        "commentId": "se114"
+    },
+    
+    {
+        "userName": "AA",
+        "time": 231,
+        "text": "photoshop element 11 users be careful. the brush size in thumbnail is not like cs6.",
+        "type": "suggestion",
+        "contentPosition": "none",
+        "commentId": "se115"
+    },
+
+      {
+        "userName": "AB",
+        "time": 138,
+        "text": "in photoshop element 13 the selection for content aware inside fill is bit different. same technique would not work in there. users have to use different tool for that. ",
+        "type": "suggestion",
+        "contentPosition": "none",
+        "commentId": "se116"
+    }
+
+
+
+
+
+ 
+ 
+ 
+
+]
