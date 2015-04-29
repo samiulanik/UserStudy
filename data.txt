@@ -1,9 +1,0 @@
-{"task": 1, "participantId": 1, "system": "baseline", "answers": "se114 se21 se97 se70", "video": "splatter", "time": 30.524}
-{"task": 2, "participantId": 1, "system": "baseline", "answers": "se13 se86 se88 se14 se113", "video": "splatter", "time": 52.269000000000005}
-{"task": 3, "participantId": 1, "system": "baseline", "answers": "se80 se94 se64 se81 se95 se12 se42 se53 se57 se99 se89 se116 se20", "video": "splatter", "time": 24.37099999999998}
-{"task": 1, "participantId": 1, "system": "categorization", "answers": "t24 t45 t46 t110", "video": "two", "time": 10.115000000000009}
-{"task": 2, "participantId": 1, "system": "categorization", "answers": "t26 t27 t69 t103", "video": "two", "time": 35.15699999999998}
-{"task": 3, "participantId": 1, "system": "categorization", "answers": "t85 t90 t108", "video": "two", "time": 5.973000000000013}
-{"task": 1, "participantId": 1, "system": "time", "answers": "fe98 fe99 fe110 fe1 fe2 fe3", "video": "fire", "time": 14.197000000000003}
-{"task": 2, "participantId": 1, "system": "time", "answers": "t112 t93 t107", "video": "fire", "time": 3.4750000000000227}
-{"task": 3, "participantId": 1, "system": "time", "answers": "t71 t93 t107", "video": "fire", "time": 7.3349999999999795}

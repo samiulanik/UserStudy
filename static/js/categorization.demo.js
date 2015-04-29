@@ -978,7 +978,14 @@
             now = now.getTime()
             var requiredTime = 300 - (endTime - now) / 1000;
 
-            var send = JSON.stringify({participantId: 1, system: "categorization", video:"two", task:1 ,time: requiredTime, answers: answerList.join(' ')});
+            var send = JSON.stringify({
+                participantId: 1,
+                system: "categorization",
+                video: "two",
+                task: 1,
+                time: requiredTime,
+                answers: answerList.join(' ')
+            });
             //console.log(requiredTime+" "+answerList);
             // $.ajax({
             //     url: '/saveLog',
@@ -1067,10 +1074,10 @@
 
         }
 
-        function logAnswer(){
-                $(".checkbox-inside").click(function(){
-                    answerList.push(this.id);
-                });                
+        function logAnswer() {
+            $(".checkbox-inside").click(function() {
+                answerList.push(this.id);
+            });
         }
 
 
@@ -1090,6 +1097,7 @@
 
         }
 
+        
         function initialize() {
 
             masterList = JSON.parse(JSON.stringify(argument.markers));
@@ -1100,7 +1108,6 @@
             getCheckedList()
             timedCommentInteraction();
             initializeColor();
-
             findMarkerPositions();
             addMarkerPosition();
             commentClick();

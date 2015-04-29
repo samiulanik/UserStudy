@@ -74,6 +74,7 @@ def baseline_task_3():
     return render_template('baseline-task-3.html')
 
 
+
 @app.route('/saveLog', methods=['POST'])
 def saveLog():
     print"working!!";
@@ -84,4 +85,4 @@ def saveLog():
     outfile.write('\n')
     
 if __name__=="__main__":
-    app.run(threaded=True)
+    app.run(host="0.0.0.0")

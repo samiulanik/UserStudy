@@ -111,7 +111,7 @@ var counters = [];
 var totalComment = 0;
 
 function readJson(callback) {
-    $.getJSON('static/json/comments_demo.json', function(data) {
+    $.getJSON('/static/json/comments_demo.json', function(data) {
         $.each(data, function(index, comment) {
             markers.push(comment);
         });
@@ -132,7 +132,7 @@ readJson(function() {
         counters[markers[i].type]++;
     }
     totalComment = markers.length;
-
+    showCategorization();
 });
 
 
