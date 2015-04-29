@@ -30,6 +30,50 @@ def categorization_watch():
     return render_template('categorization-watch.html')
 
 
+@app.route('/time_demo')
+def time_demo():
+    return render_template('time-demo.html')
+
+@app.route('/time_watch')
+def time_watch():
+    return render_template('time-watch.html')
+
+@app.route('/time_task_1')
+def time_task_1():
+    return render_template('time-task-1.html')
+
+
+@app.route('/time_task_2')
+def time_task_2():
+    return render_template('time-task-2.html')
+
+
+@app.route('/time_task_3')
+def time_task_3():
+    return render_template('time-task-3.html')
+
+
+@app.route('/baseline_demo')
+def baseline_demo():
+    return render_template('baseline-demo.html')
+
+@app.route('/baseline_watch')
+def baseline_watch():
+    return render_template('baseline-watch.html')
+
+@app.route('/baseline_task_1')
+def baseline_task_1():
+    return render_template('baseline-task-1.html')
+
+@app.route('/baseline_task_2')
+def baseline_task_2():
+    return render_template('baseline-task-2.html')
+
+@app.route('/baseline_task_3')
+def baseline_task_3():
+    return render_template('baseline-task-3.html')
+
+
 @app.route('/saveLog', methods=['POST'])
 def saveLog():
     print"working!!";

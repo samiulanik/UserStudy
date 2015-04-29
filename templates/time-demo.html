@@ -12,12 +12,12 @@
     <div class="container" style="position: relative; height:100%">
         <div style="position: relative; left: 0px; height: 10vh; width: 100%;">
             <p style="position: relative; left: 17vw; font-size: 3vh; top:50%; color: red;">Find comments that mentioned problem with the keyword “opacity”.</p>
-            <INPUT TYPE="button" id="startTimeButton" class="btn" VALUE="Start" style="position: relative; left: 64vw; top:-1vh; "  >a
+            <INPUT TYPE="button" id="startTimeButton" class="btn" VALUE="Start" style="position: relative; left: 64vw; top:-1vh; "  >
             <INPUT TYPE="button" id="submitAnswerButton" class="btn" VALUE="Submit" style="position: relative; left: 65vw; top:-.9vh; " >
             <p id="timeDisplay" style="position: relative; left: 75vw; top:-6.8vh; font-size: 3vh; color:blue; "> </p>
         </div>
         <div style="position: relative; left: 0px;  width: 23vw;">
-            <ul style="list-style:none;padding:2px; border: 2px solid black; width: 95%; height: 35vh; background-color: white;">
+        <!--     <ul style="list-style:none;padding:2px; border: 2px solid black; width: 95%; height: 35vh; background-color: white;">
                 <li class="category" id="appreciation">
                     <input type="checkbox" class="checkbox" id="appreciation-checked" />
                     <h3 id="appreciation-text"></h3>
@@ -54,7 +54,7 @@
                 </li>
             </ul>
             <br>
-            <ul style="list-style:none;padding:0.5px; border: 2px solid black; width: 22vw; height: 17vh; background-color: white;">
+         -->    <ul style="list-style:none;padding:0.5px; border: 2px solid black; width: 22vw; height: 17vh; background-color: white;">
                 <!-- <li>
                     <input type="radio" class="radio-button" id="total-checked" style="top: 435px; position:absolute;" name="comment-type" value="all" />
                     <h3 id="total-text" style="top: 415px;">Show All Comments</h3>
@@ -99,7 +99,7 @@
 <script src="static/js/video.js"></script>
 <script src="static/js/jquery-1.11.1.js"></script>
 <script src="static/js/jquery-ui.js"></script>
-<script src="static/js/categorization.demo.js"></script>
+<script src="static/js/time.demo.js"></script>
 <script src="static/js/svg.js"></script>
 <script>
 // initialize video.js
@@ -382,8 +382,10 @@ $("#appreciation-checked").click(function() {
         $("#all-checked").prop("checked", this.checked);
 
     // if ($('input[name="comment-type"]:checked').val() != "all")
-    player.markers.checkboxClickAction("appreciation", this.checked, $('input[name="comment-type"]:checked').val());
+    player.markers.checkboxClickAction("appreciation", this.checked, $('input[name="comment-type"]:checked').val()) 
 });
+
+
 $("#suggestion-checked").click(function() {
     if (!this.checked)
         $("#all-checked").prop("checked", this.checked);

@@ -2,3 +2,20 @@
 {"task": 2, "participantId": 1, "system": "categorization", "answers": "t24 t45 t46 t94 t95 t79 t101 t102", "video": "two", "time": 19.12099999999998}
 {"task": 3, "participantId": 1, "system": "categorization", "answers": "t44 t52 t103 t95 t94 t79 t101 t102", "video": "two", "time": 14.317999999999984}
 {"task": 1, "participantId": 1, "system": "categorization", "answers": "t37 t94 t95 t71", "video": "two", "time": 77.719}
+{"task": 1, "participantId": 1, "system": "time", "answers": "", "video": "fire", "time": 1430252640.592}
+{"task": 1, "participantId": 1, "system": "time", "answers": "fe84 fe85 fe63 fe114 fe115", "video": "fire", "time": 24.117999999999995}
+{"task": 2, "participantId": 1, "system": "time", "answers": "t71 t37 t94 t84 t86 t2 t1 t3 t4 t64 t115", "video": "fire", "time": 52.21100000000001}
+{"task": 3, "participantId": 1, "system": "time", "answers": "t44 t52 t94 t95 t112 t79 t101 t102 t111 t94 t95", "video": "fire", "time": 30.132000000000005}
+{"task": 1, "participantId": 1, "system": "baseline", "answers": "d16 d13 d21 d36 d27 d32 d41", "video": "splatter", "time": 14.781000000000006}
+{"task": 1, "participantId": 1, "system": "baseline", "answers": "d16 d13 d21 d36 d27 d32 d41", "video": "splatter", "time": 19.12700000000001}
+{"task": 1, "participantId": 1, "system": "baseline", "answers": "d16 d13 d21 d36 d27 d32 d41", "video": "splatter", "time": 19.665999999999997}
+{"task": 1, "participantId": 1, "system": "baseline", "answers": "d16 d13 d21 d36 d27 d32 d41", "video": "splatter", "time": 20.749000000000024}
+{"task": 1, "participantId": 1, "system": "baseline", "answers": "d16 d13 d21 d36 d27 d32 d41", "video": "splatter", "time": 21.776999999999987}
+{"task": 1, "participantId": 1, "system": "baseline", "answers": "d16 d13 d21 d36 d27 d32 d41", "video": "splatter", "time": 22.194999999999993}
+{"task": 1, "participantId": 1, "system": "baseline", "answers": "d16 d13 d21 d36 d27 d32 d41", "video": "splatter", "time": 22.410000000000025}
+{"task": 1, "participantId": 1, "system": "baseline", "answers": "d16 d13 d21 d36 d27 d32 d41", "video": "splatter", "time": 22.595000000000027}
+{"task": 1, "participantId": 1, "system": "baseline", "answers": "se76 se10 se53 se91 se9", "video": "splatter", "time": 16.714999999999975}
+{"task": 2, "participantId": 1, "system": "baseline", "answers": "se59 se48 se1 se56 se88 se63 se45 se18", "video": "splatter", "time": 21.826999999999998}
+{"task": 2, "participantId": 1, "system": "baseline", "answers": "se39 se68 se33 se2 se20 se6", "video": "splatter", "time": 41.375}
+{"task": 2, "participantId": 1, "system": "baseline", "answers": "se42 se1 se99 se46", "video": "splatter", "time": 11.786000000000001}
+{"task": 3, "participantId": 1, "system": "baseline", "answers": "se5 se89 se102", "video": "splatter", "time": 1.7440000000000282}

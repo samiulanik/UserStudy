@@ -11,13 +11,13 @@
 <body style="background-color: #F8F8F8; height:100vh;">
     <div class="container" style="position: relative; height:100%">
         <div style="position: relative; left: 0px; height: 10vh; width: 100%;">
-            <p style="position: relative; left: 17vw; font-size: 3vh; top:50%; color: red;">Find comments that mentioned problem with the keyword “opacity”.</p>
-            <INPUT TYPE="button" id="startTimeButton" class="btn" VALUE="Start" style="position: relative; left: 64vw; top:-1vh; "  >a
-            <INPUT TYPE="button" id="submitAnswerButton" class="btn" VALUE="Submit" style="position: relative; left: 65vw; top:-.9vh; " >
-            <p id="timeDisplay" style="position: relative; left: 75vw; top:-6.8vh; font-size: 3vh; color:blue; "> </p>
+            <p style="position: relative; left: 12vw; font-size: 3vh; top:50%; color: red;">Find comments that mentioned some suggestion to do the tutorial in different version or application.</p>
+            <INPUT TYPE="button" id="startTimeButton" class="btn" VALUE="Start" style="position: relative; left: 77vw; top:-1vh; "  >
+            <INPUT TYPE="button" id="submitAnswerButton" class="btn" VALUE="Submit" style="position: relative; left: 79vw; top:-.9vh; " >
+            <p id="timeDisplay" style="position: relative; left: 90vw; top:-6.8vh; font-size: 3vh; color:blue; "> </p>
         </div>
         <div style="position: relative; left: 0px;  width: 23vw;">
-            <ul style="list-style:none;padding:2px; border: 2px solid black; width: 95%; height: 35vh; background-color: white;">
+            <!-- <ul style="list-style:none;padding:2px; border: 2px solid black; width: 95%; height: 35vh; background-color: white;">
                 <li class="category" id="appreciation">
                     <input type="checkbox" class="checkbox" id="appreciation-checked" />
                     <h3 id="appreciation-text"></h3>
@@ -53,7 +53,7 @@
                     <h3>Check All</h3>
                 </li>
             </ul>
-            <br>
+            <br> -->
             <ul style="list-style:none;padding:0.5px; border: 2px solid black; width: 22vw; height: 17vh; background-color: white;">
                 <!-- <li>
                     <input type="radio" class="radio-button" id="total-checked" style="top: 435px; position:absolute;" name="comment-type" value="all" />
@@ -72,7 +72,7 @@
         <div id="line" style="z-index: 1000000; position:absolute; left:22.5vw; top:0px"></div>
         <div class="video-container" style=" position: absolute; left: 22.5vw; top: 11.5vh;">
             <video id="photoshop_video_tutorial" controls preload="none" class="video-js vjs-default-skin" width="1200" height="675">
-                <source src="static/videos/photoshop_demo.mp4" type="video/mp4">
+                <source src="static/videos/photoshop_two.mp4" type="video/mp4">
             </video>
         </div>
         <div class="comment-container" style="position: absolute; left: 85vw; top: 11.5vh;"></div>
@@ -99,7 +99,7 @@
 <script src="static/js/video.js"></script>
 <script src="static/js/jquery-1.11.1.js"></script>
 <script src="static/js/jquery-ui.js"></script>
-<script src="static/js/categorization.demo.js"></script>
+<script src="static/js/time.task.3.js"></script>
 <script src="static/js/svg.js"></script>
 <script>
 // initialize video.js
@@ -111,7 +111,7 @@ var counters = [];
 var totalComment = 0;
 
 function readJson(callback) {
-    $.getJSON('static/json/comments_demo.json', function(data) {
+    $.getJSON('static/json/comments_two.json', function(data) {
         $.each(data, function(index, comment) {
             markers.push(comment);
         });
