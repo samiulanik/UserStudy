@@ -77,7 +77,7 @@ def baseline_task_3():
 
 @app.route('/saveLog', methods=['POST'])
 def saveLog():
-    print"working!!";
+    #print"working!!";
     content = request.json    
     #print(content.get('time'))
     outfile = open('data.txt', 'a')

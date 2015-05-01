@@ -11,10 +11,10 @@
 <body style="background-color: #F8F8F8; height:100vh;">
     <div class="container" style="position: relative; height:100%">
         <div style="position: relative; left: 0px; height: 10vh; width: 100%;">
-           <!--  <p style="position: relative; left: 35vw; font-size: 3vh; top:50%; color: red;">Find commments with the keyword "paint"</p> -->
-            <INPUT TYPE="button" id="startTimeButton" class="btn" VALUE="Start" style="position: relative; left: 40vw; top:5vh; "/>
+            <!--  <p style="position: relative; left: 35vw; font-size: 3vh; top:50%; color: red;">Find commments with the keyword "paint"</p> -->
+            <INPUT TYPE="button" id="startTimeButton" class="btn" VALUE="Start" style="position: relative; left: 40vw; top:5vh; " />
             <INPUT TYPE="button" id="submitAnswerButton" class="btn" VALUE="Submit" style="position: relative; left: 45vw; top:5vh; " />
-            <p id="timeDisplay" style="position: relative; left: 60vw; top:5vhvh; font-size: 3vh; color:blue; "> </p>
+            <p id="timeDisplay" style="position: relative; left: 60vw; top: -1vh; font-size: 3vh; color:blue; "> </p>
         </div>
         <div style="position: relative; left: 0px;  width: 23vw;">
             <ul style="list-style:none;padding:2px; border: 2px solid black; width: 95%; height: 35vh; background-color: white;">
@@ -93,12 +93,13 @@
             <p id="content-hightlight-text" style=" position:relative;left:23vw; top: -23vh; visibility:hidden; color: red; font-size:15px;">Please click inside video to highlight the content </p>
         </div>
         <!-- div class="comment-container-below" style="position: absolute; left:430px ; top: 950px; width: 1200px; visibility:visible;"> </div>
-        --> 
+        -->
     </div>
 </body>
 <script src="static/js/video.js"></script>
 <script src="static/js/jquery-1.11.1.js"></script>
 <script src="static/js/jquery-ui.js"></script>
+<script src="static/js/jquery.debounce.js"></script>
 <script src="static/js/categorization.task.1.js"></script>
 <script src="static/js/svg.js"></script>
 <script>
@@ -107,6 +108,12 @@ var markers = [];
 var counters = [];
 //var contentPosition;
 var totalComment = 0;
+var running = false;
+var endTime = null;
+var timerID = null;
+var now = null;
+
+
 
 function readJson(callback) {
     $.getJSON('static/json/comments_two.json', function(data) {
@@ -128,7 +135,7 @@ counters["link"] = 0;
 
 readJson(function() {
     for (var i = 0; i < markers.length; i++) {
-        counters[markers[i].type] ++;
+        counters[markers[i].type]++;
     }
     totalComment = markers.length;
 
@@ -190,6 +197,87 @@ function checkboxDisable(flag) {
 
 
 }
+
+// function startTimer() {
+//     running = true
+//     now = new Date()
+//     now = now.getTime()
+//         // change last multiple for the number of minutes
+//     endTime = now + (1000 * 60 * 5)
+//     showCountDown()
+// }
+
+// function showCountDown() {
+//     var now = new Date()
+//     now = now.getTime()
+//     if (endTime - now <= 0) {
+//         stopTimer()
+
+//         alert("Time is up.")
+//     } else {
+//         var delta = new Date(endTime - now)
+//         var theMin = delta.getMinutes()
+//         var theSec = delta.getSeconds()
+//         var theTime = theMin
+//         theTime += ((theSec < 10) ? ":0" : ":") + theSec
+//             //document.forms[0].timerDisplay.value = theTime
+//         $('#timeDisplay').text(theTime);
+
+//         if (running) {
+//             timerID = setTimeout(showCountDown, 1000)
+//         }
+//     }
+// }
+
+// function stopTimer() {
+//     clearTimeout(timerID)
+//     running = false
+//     var now = new Date()
+//     now = now.getTime()
+//     var requiredTime = 300 - (endTime - now) / 1000;
+
+//     var send = JSON.stringify({
+//         participantId: 1,
+//         system: "categorization",
+//         video: "two",
+//         task: 1,
+//         time: requiredTime,
+//         //answers: answerList.join(' ')
+//     });
+//     //console.log(requiredTime+" "+answerList);
+//     $.ajax({
+//         url: '/saveLog',
+//         type: 'POST',
+//         data: send,
+//         contentType: "application/json",
+//         dataType: 'json',
+//         success: function(response) {
+//             console.log(response);
+//         },
+//         error: function(error) {
+//             console.log(error);
+//         }
+//     });
+
+// }
+
+//         function timeActivity() {
+
+//             $("#startTimeButton").click(function() {
+
+//                 //alert("start timer");
+//                 startTimer();
+
+//             });
+
+//             $("#submitAnswerButton").click(function() {
+
+//                 stopTimer();
+
+//             });
+
+//         }
+
 
 $(document).ready(function() {
 
@@ -296,7 +384,7 @@ $(document).ready(function() {
 
         var obj = {};
 
-        var contentPosition = ($("#anchor").position().left-$('.video-container').position().left) + "," + ($("#anchor").position().top-$('.video-container').position().top);
+        var contentPosition = ($("#anchor").position().left - $('.video-container').position().left) + "," + ($("#anchor").position().top - $('.video-container').position().top);
 
 
         console.log(contentPosition);
@@ -312,7 +400,7 @@ $(document).ready(function() {
         //console.log(obj.contentPosition);
         $("#comment").val("");
 
-        counters[obj.type] ++;
+        counters[obj.type]++;
         totalComment++;
         showCategorization();
 

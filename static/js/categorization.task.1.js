@@ -40,9 +40,10 @@
             sideCommentOption = "all",
             answerList = [];
         var running = false;
-        var endTime = null;
+        var studyTime = 0;
         var timerID = null;
-        var now = null;
+        //var now = null;
+        var logArray = [];
 
 
 
@@ -139,7 +140,7 @@
                 tempComment.time = tempList[i].time;
                 tempComment.text = tempList[i].text;
                 tempComment.type = tempList[i].type;
-                tempComment.key = "comment-" + i;
+                tempComment.key = tempList[i].commentId
                 tempComment.contentPosition = tempList[i].contentPosition;
                 tempComment.markerPositionTime = tempComment.time == -1 ? -1 : 3 * (2 * Math.ceil(tempList[i].time / 6) - 1);
                 commentList.push(tempComment);
@@ -580,7 +581,7 @@
                     player.currentTime(markers[key].time);
                 });
 
-                markerClickEvent(marker.div);
+                markerClickEvent(marker.div, nonZeroList);
 
             });
         }
@@ -596,7 +597,7 @@
 
 
 
-        function markerClickEvent(markerDiv) {
+        function markerClickEvent(markerDiv, nonZeroList) {
 
 
 
@@ -615,6 +616,17 @@
 
                 var id = $(this).data('marker-index');
                 var markerTime = markers[id].time;
+                var now = new Date()
+                now = now.getTime()
+                var currentStudyTime = 300 - ((studyTime - now) / 1000)
+                var logData = {
+                    anchorTime: markers[id].time,
+                    StudyTime: currentStudyTime,
+                    anchorTypeList: nonZeroList.join(' '),
+                    activeTypeList: checkTrueList.join(' ')
+                }
+                logArray.push(logData)
+                console.log(logData);
                 var textCotentHighlight = "please click the comment to highlight the position inside video."
 
                 for (var i = 0; i < commentList.length; i++) {
@@ -633,7 +645,7 @@
 
                     }
                 }
-                logAnswer();
+                //logAnswer();
 
 
             }).on('mouseout', function() {
@@ -731,6 +743,75 @@
                 }
 
             });
+
+        }
+
+        function logClickEvent() {
+
+            var startScroll=0;
+            var endScroll=0;
+            $(".checkbox").click(function() {
+
+                var now = new Date()
+                now = now.getTime()
+                    //alert("start timer");
+                var currentStudyTime = 300 - ((studyTime - now) / 1000);
+                var logData = {
+                    checkboxId: this.id,
+                    checkboxStatus: $('#' + this.id).prop('checked'),
+                    studyTime: currentStudyTime
+                }
+                logArray.push(logData);
+                console.log(logData);
+            });
+
+            $(".radio-button").click(function() {
+
+                var now = new Date()
+                now = now.getTime()
+                var currentStudyTime = 300 - ((studyTime - now) / 1000);
+                var logData = {
+                    checkboxId: this.id,
+                    studyTime: currentStudyTime
+                }
+                logArray.push(logData);
+                console.log(logData);
+            });
+
+            $(".vjs-progress-holder").on('mouseup', function() {
+
+                var now = new Date()
+                now = now.getTime()
+                var currentStudyTime = 300 - ((studyTime - now) / 1000);
+                var logData = {
+                    seekBarClickTime: player.currentTime(),
+                    studyTime: currentStudyTime
+                }
+                logArray.push(logData);
+                console.log(logData);
+            });
+
+            $(".comment-container").scroll($.debounce(250, true, function() {
+                //console.log("started scroll");
+                var now = new Date();
+                now = now.getTime()
+                startScroll = 300 - ((studyTime - now) / 1000);
+
+            }));
+            $(".comment-container").scroll($.debounce(250, function() {
+
+                //console.log("end scroll");
+                var now = new Date();
+                now = now.getTime()
+                endScroll = 300 - ((studyTime - now) / 1000);
+
+                var logData = {startScroll: startScroll, scrollTime: (endScroll-startScroll)}
+
+                logArray.push(logData);
+                console.log(logData);
+                //alert((endScroll - startScroll) / 1000)
+            }));
+
 
         }
 
@@ -942,22 +1023,22 @@
 
         function startTimer() {
             running = true
-            now = new Date()
-            now = now.getTime()
+            var now = new Date()
+            var now = now.getTime()
                 // change last multiple for the number of minutes
-            endTime = now + (1000 * 60 * 5)
+            studyTime = now + (1000 * 60 * 5)
             showCountDown()
         }
 
         function showCountDown() {
             var now = new Date()
             now = now.getTime()
-            if (endTime - now <= 0) {
+            if (studyTime - now <= 0) {
                 stopTimer()
 
                 alert("Time is up.")
             } else {
-                var delta = new Date(endTime - now)
+                var delta = new Date(studyTime - now)
                 var theMin = delta.getMinutes()
                 var theSec = delta.getSeconds()
                 var theTime = theMin
@@ -976,9 +1057,16 @@
             running = false
             var now = new Date()
             now = now.getTime()
-            var requiredTime = 300 - (endTime - now) / 1000;
-
-            var send = JSON.stringify({participantId: 1, system: "categorization", video:"two", task:1 ,time: requiredTime, answers: answerList.join(' ')});
+            var requiredTime = 300 - (studyTime - now) / 1000;
+            //var logDump = JSON.stringify(logArray);
+            var send = JSON.stringify({
+                participantId: 1,
+                system: "categorization",
+                video: "two",
+                task: 1,
+                time: requiredTime,
+                answers: logArray
+            });
             //console.log(requiredTime+" "+answerList);
             $.ajax({
                 url: '/saveLog',
@@ -987,10 +1075,10 @@
                 contentType: "application/json",
                 dataType: 'json',
                 success: function(response) {
-                    console.log(response);
+                   // console.log(response);
                 },
                 error: function(error) {
-                    console.log(error);
+                    //console.log(error);
                 }
             });
 
@@ -1013,6 +1101,7 @@
             });
 
         }
+
 
         function displaySideCommentSection(option) {
 
@@ -1051,7 +1140,7 @@
                 for (var i = 0; i < commentList.length; i++) {
 
                     if (commentList[i].markerPositionTime == -1 && $.inArray(commentList[i].type, checkTrueList) != -1) {
-                        commentContainer.append("<li class ='vjs-comment-list' id='" + commentList[i].key + "' style='border-right:" + colorList[commentList[i].type] + " solid 5px;'>" + "<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<input type='checkbox' class='checkbox-inside' id='" + commentList[i].commentId + "'/>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "</div></div></div></li>")
+                        commentContainer.append("<li class ='vjs-comment-list' id='" + commentList[i].key + "' style='border-right:" + colorList[commentList[i].type] + " solid 5px;'>" + "<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "</div></div></div></li>")
                         commentContainer.css({
                             "visibility": 'visible',
                         });
@@ -1059,7 +1148,7 @@
 
                     }
                 }
-                logAnswer();
+                //logAnswer();
 
 
 
@@ -1067,11 +1156,11 @@
 
         }
 
-        function logAnswer(){
-                $(".checkbox-inside").click(function(){
-                    answerList.push(this.id);
-                });                
-        }
+        // function logAnswer() {
+        //     $(".checkbox-inside").click(function() {
+        //         answerList.push(this.id);
+        //     });
+        // }
 
 
         function initializeCommentContainer() {
@@ -1100,7 +1189,7 @@
             getCheckedList()
             timedCommentInteraction();
             initializeColor();
-
+            logClickEvent();
             //findMarkerPositions();
             //addMarkerPosition();
             //commentClick();
@@ -1189,7 +1278,7 @@
                         getCheckedList();
                         findMarkerPositions();
                         addMarkerPosition();
-                        displayBottomCommentSection();
+                        //displayBottomCommentSection();
                         commentClick();
                     } else {
                         for (var key in checkList) {
@@ -1212,7 +1301,7 @@
                 getCheckedList();
                 if (value == "general") {
 
-                    displaySideCommentSection(value);
+                    //displaySideCommentSection(value);
 
 
                 } else if (value == "time") {
