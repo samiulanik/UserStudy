@@ -622,6 +622,7 @@
                 var logData = {
                     anchorTime: markers[id].time,
                     StudyTime: currentStudyTime,
+                    commentCount= getCommentPositionCount(markerTime),
                     anchorTypeList: nonZeroList.join(' '),
                     activeTypeList: checkTrueList.join(' ')
                 }
@@ -759,7 +760,8 @@
                 var logData = {
                     checkboxId: this.id,
                     checkboxStatus: $('#' + this.id).prop('checked'),
-                    studyTime: currentStudyTime
+                    studyTime: currentStudyTime,
+                    checkedListCurrent: checkTrueList.join(' ')
                 }
                 logArray.push(logData);
                 console.log(logData);
@@ -771,8 +773,9 @@
                 now = now.getTime()
                 var currentStudyTime = 300 - ((studyTime - now) / 1000);
                 var logData = {
-                    checkboxId: this.id,
-                    studyTime: currentStudyTime
+                    radioId: this.id,
+                    studyTime: currentStudyTime,
+                    checkedListCurrent: checkTrueList.join(' ')
                 }
                 logArray.push(logData);
                 console.log(logData);
@@ -1026,7 +1029,7 @@
             var now = new Date()
             var now = now.getTime()
                 // change last multiple for the number of minutes
-            studyTime = now + (1000 * 60 * 5)
+            studyTime = now + (1000 * 60 * 10)
             showCountDown()
         }
 
@@ -1063,7 +1066,7 @@
                 participantId: 1,
                 system: "categorization",
                 video: "two",
-                task: 1,
+                task: 3,
                 time: requiredTime,
                 answers: logArray
             });
