@@ -622,7 +622,7 @@
                 var logData = {
                     anchorTime: markers[id].time,
                     StudyTime: currentStudyTime,
-                    commentCount= getCommentPositionCount(markerTime),
+                    commentCount: getCommentPositionCount(markerTime),
                     anchorTypeList: nonZeroList.join(' '),
                     activeTypeList: checkTrueList.join(' ')
                 }
@@ -747,7 +747,7 @@
 
         }
 
-        function logClickEvent() {
+        function logEvents() {
 
             var startScroll=0;
             var endScroll=0;
@@ -1068,7 +1068,7 @@
                 video: "two",
                 task: 1,
                 time: requiredTime,
-                answers: logArray
+                log: logArray
             });
             //console.log(requiredTime+" "+answerList);
             $.ajax({
@@ -1192,7 +1192,7 @@
             getCheckedList()
             timedCommentInteraction();
             initializeColor();
-            logClickEvent();
+            logEvents();
             //findMarkerPositions();
             //addMarkerPosition();
             //commentClick();

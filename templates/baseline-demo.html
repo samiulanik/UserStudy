@@ -1,34 +1,42 @@
-
 <!doctype html>
 <html>
 
 <head>
+
     <link href="static/css/video-js.css" rel="stylesheet">
     <link href="static/css/videojs.markers.custom.non-overlay.css" rel="stylesheet">
     <link href="static/css/comment-categorization-style.css" rel="stylesheet">
     <link href="static/css/jquery-ui.css" rel="stylesheet">
+
 </head>
+
 
 <body style="background-color: #F8F8F8">
     <div style="position: relative; left: 0px; height: 10vh; width: 100%;">
-        <p style="position: relative; left: 20vw; font-size: 3vh; top:50%; color: red;">Find comments that mentioned problem with the keyword “opacity”.</p>
-        <INPUT TYPE="button" id="startTimeButton" class="btn" VALUE="Start" style="position: relative; left: 64vw; top:-1vh; ">
-        <INPUT TYPE="button" id="submitAnswerButton" class="btn" VALUE="Submit" style="position: relative; left: 65vw; top:-.9vh; ">
-        <p id="timeDisplay" style="position: relative; left: 75vw; top:-6.8vh; font-size: 3vh; color:blue; "> </p>
-    </div>
-    <div class="container" style="position: relative;">
+            <!--  <p style="position: relative; left: 35vw; font-size: 3vh; top:50%; color: red;">Find commments with the keyword "paint"</p> -->
+            <!-- <INPUT TYPE="button" id="startTimeButton" class="btn" VALUE="Start" style="position: relative; left: 40vw; top:5vh; " />
+            <INPUT TYPE="button" id="submitAnswerButton" class="btn" VALUE="Submit" style="position: relative; left: 45vw; top:5vh; " />
+            <p id="timeDisplay" style="position: relative; left: 60vw; top: -1vh; font-size: 3vh; color:blue; "> </p> -->
+        </div>
+    <div class="container" style="position: relative;">      
         <div class="video-container" style=" position: absolute; left: 430px; top: 0px;">
-            <video id="photoshop_video_tutorial" controls preload="none" class="video-js vjs-default-skin" width="1200" height="675" data-setup='{ "controls": true, "autoplay": false, "preload": "auto" }'>
+            <video id="photoshop_video_tutorial" controls preload="none" class="video-js vjs-default-skin" width="1200" height="675">
                 <source src="static/videos/photoshop_demo.mp4" type="video/mp4">
-
             </video>
         </div>
-        <div class="comment-posting" style="position: absolute; top: 700px; left:430px; background-color: white; width:1200px; height:200px;">
+
+
+     <div class="comment-posting" style="position: absolute; top: 700px; left:430px; background-color: white; width:1200px; height:200px;">
             <textarea name="text" class="validate[required,length[6,300]] comment-input" id="comment" placeholder="Comment"></textarea>
+          
             <p style=" position:relative; top: 120px; left: 850px;">Timed Comment </p>
             <input type="checkbox" id="timed-comment" style=" position:relative; top: 80px; left: 970px;" />
+
             <button type="button" id="comment-post" class="btn" style=" position:relative; top: 78px; left: 1050px;">Post</button>
+           
         </div>
+
+        
         <div class="comment-container-below" style="position: absolute; left:430px ; top: 890px;"></div>
     </div>
 </body>
@@ -36,6 +44,9 @@
 <script src="static/js/jquery-1.11.1.js"></script>
 <script src="static/js/baseline.demo.js"></script>
 <script src="static/js/jquery-ui.js"></script>
+<script src="static/js/jquery.debounce.js"></script>
+
+
 <script>
 // initialize video.js
 
@@ -64,7 +75,7 @@ counters["link"] = 0;
 
 readJson(function() {
     for (var i = 0; i < markers.length; i++) {
-        counters[markers[i].type]++;
+        counters[markers[i].type] ++;
     }
     totalComment = markers.length;
 
@@ -116,14 +127,6 @@ function showCategorization() {
 */
 $(document).ready(function() {
 
-    // if (document.URL.indexOf("#") == -1) {
-    //     // Set the URL to whatever it was plus "#".
-    //     url = document.URL + "#";
-    //     location = "#";
-
-    //     //Reload the page
-    //     location.reload(true);
-    // }
 
 
     //initialization();

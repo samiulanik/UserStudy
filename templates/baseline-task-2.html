@@ -13,12 +13,11 @@
 
 <body style="background-color: #F8F8F8">
     <div style="position: relative; left: 0px; height: 10vh; width: 100%;">
-            <p style="position: relative; left: 19vw; font-size: 3vh; top:50%; color: red;">Find comments that mentioned some problem with the keyword “fill”.</p>
-            <INPUT TYPE="button" id="startTimeButton" class="btn" VALUE="Start" style="position: relative; left: 64vw; top:-1vh; "  >
-            <INPUT TYPE="button" id="submitAnswerButton" class="btn" VALUE="Submit" style="position: relative; left: 65vw; top:-.9vh; " >
-            <p id="timeDisplay" style="position: relative; left: 75vw; top:-6.8vh; font-size: 3vh; color:blue; "> </p>
-     </div>
-
+            <!--  <p style="position: relative; left: 35vw; font-size: 3vh; top:50%; color: red;">Find commments with the keyword "paint"</p> -->
+            <INPUT TYPE="button" id="startTimeButton" class="btn" VALUE="Start" style="position: relative; left: 40vw; top:5vh; " />
+            <INPUT TYPE="button" id="submitAnswerButton" class="btn" VALUE="Submit" style="position: relative; left: 45vw; top:5vh; " />
+            <p id="timeDisplay" style="position: relative; left: 60vw; top: -1vh; font-size: 3vh; color:blue; "> </p>
+        </div>
     <div class="container" style="position: relative;">      
         <div class="video-container" style=" position: absolute; left: 430px; top: 0px;">
             <video id="photoshop_video_tutorial" controls preload="none" class="video-js vjs-default-skin" width="1200" height="675">
@@ -45,6 +44,8 @@
 <script src="static/js/jquery-1.11.1.js"></script>
 <script src="static/js/baseline.task.2.js"></script>
 <script src="static/js/jquery-ui.js"></script>
+<script src="static/js/jquery.debounce.js"></script>
+
 
 <script>
 // initialize video.js

@@ -618,11 +618,11 @@
                 var markerTime = markers[id].time;
                 var now = new Date()
                 now = now.getTime()
-                var currentStudyTime = 300 - ((studyTime - now) / 1000)
+                var currentStudyTime = 600 - ((studyTime - now) / 1000)
                 var logData = {
                     anchorTime: markers[id].time,
                     StudyTime: currentStudyTime,
-                    commentCount= getCommentPositionCount(markerTime),
+                    commentCount: getCommentPositionCount(markerTime),
                     anchorTypeList: nonZeroList.join(' '),
                     activeTypeList: checkTrueList.join(' ')
                 }
@@ -747,7 +747,7 @@
 
         }
 
-        function logClickEvent() {
+        function logEvents() {
 
             var startScroll=0;
             var endScroll=0;
@@ -756,7 +756,7 @@
                 var now = new Date()
                 now = now.getTime()
                     //alert("start timer");
-                var currentStudyTime = 300 - ((studyTime - now) / 1000);
+                var currentStudyTime = 600 - ((studyTime - now) / 1000);
                 var logData = {
                     checkboxId: this.id,
                     checkboxStatus: $('#' + this.id).prop('checked'),
@@ -771,7 +771,7 @@
 
                 var now = new Date()
                 now = now.getTime()
-                var currentStudyTime = 300 - ((studyTime - now) / 1000);
+                var currentStudyTime = 600 - ((studyTime - now) / 1000);
                 var logData = {
                     radioId: this.id,
                     studyTime: currentStudyTime,
@@ -785,7 +785,7 @@
 
                 var now = new Date()
                 now = now.getTime()
-                var currentStudyTime = 300 - ((studyTime - now) / 1000);
+                var currentStudyTime = 600 - ((studyTime - now) / 1000);
                 var logData = {
                     seekBarClickTime: player.currentTime(),
                     studyTime: currentStudyTime
@@ -798,7 +798,7 @@
                 //console.log("started scroll");
                 var now = new Date();
                 now = now.getTime()
-                startScroll = 300 - ((studyTime - now) / 1000);
+                startScroll = 600 - ((studyTime - now) / 1000);
 
             }));
             $(".comment-container").scroll($.debounce(250, function() {
@@ -806,7 +806,7 @@
                 //console.log("end scroll");
                 var now = new Date();
                 now = now.getTime()
-                endScroll = 300 - ((studyTime - now) / 1000);
+                endScroll = 600 - ((studyTime - now) / 1000);
 
                 var logData = {startScroll: startScroll, scrollTime: (endScroll-startScroll)}
 
@@ -1060,7 +1060,7 @@
             running = false
             var now = new Date()
             now = now.getTime()
-            var requiredTime = 300 - (studyTime - now) / 1000;
+            var requiredTime = 600 - (studyTime - now) / 1000;
             //var logDump = JSON.stringify(logArray);
             var send = JSON.stringify({
                 participantId: 1,
@@ -1068,7 +1068,7 @@
                 video: "two",
                 task: 3,
                 time: requiredTime,
-                answers: logArray
+                log: logArray
             });
             //console.log(requiredTime+" "+answerList);
             $.ajax({
@@ -1192,7 +1192,7 @@
             getCheckedList()
             timedCommentInteraction();
             initializeColor();
-            logClickEvent();
+            logEvents();
             //findMarkerPositions();
             //addMarkerPosition();
             //commentClick();

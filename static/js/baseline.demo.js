@@ -40,9 +40,10 @@
                 commentType = "all";
             var answerList = [];
             var running = false;
-            var endTime = null;
             var timerID = null;
             var now = null;
+            var logArray = [];
+            var studyTime = 0;
 
 
 
@@ -896,7 +897,7 @@
 
                         if (commentList[i].time == -1) {
 
-                            belowCommentContainer.append("<li class ='vjs-bottom-comment-list' id='" + commentList[i].key + "''>" + "<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic-youtube'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<input type='checkbox' class='checkbox-inside' id='" + commentList[i].commentId + "'/>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "</div></div></div></li>")
+                            belowCommentContainer.append("<li class ='vjs-bottom-comment-list' id='" + commentList[i].key + "''>" + "<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic-youtube'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "</div></div></div></li>")
 
                             belowCommentContainer.css({
                                 "visibility": 'visible',
@@ -904,7 +905,7 @@
 
                         } else {
 
-                            belowCommentContainer.append("<li class ='vjs-bottom-comment-list' id='" + commentList[i].key + "''>" + "<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic-youtube'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<input type='checkbox' class='checkbox-inside' id='" + commentList[i].commentId + "'/>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "  " + "<a href ='#' onClick= 'player.currentTime(" + commentList[i].markerPositionTime + "); player.pause();' >" + "<br> time: " + Math.floor(commentList[i].markerPositionTime / 60) + ":" + commentList[i].markerPositionTime % 60 + "</a>" + "</div></div></div></li>")
+                            belowCommentContainer.append("<li class ='vjs-bottom-comment-list' id='" + commentList[i].key + "''>" + "<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic-youtube'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "  " + "<a href ='#' class='time-hyperlink' id= '" + commentList[i].commentId + "-hlink" + " 'onClick= 'player.currentTime(" + commentList[i].markerPositionTime + "); player.pause();' >" + "<br> time: " + Math.floor(commentList[i].markerPositionTime / 60) + ":" + commentList[i].markerPositionTime % 60 + "</a>" + "</div></div></div></li>")
                             belowCommentContainer.css({
                                 "visibility": 'visible',
                             });
@@ -918,7 +919,7 @@
 
                 }
 
-                logAnswer();
+                //logAnswer();
                 /*   else {
 
                        belowCommentContainer.empty();
@@ -935,19 +936,19 @@
                 now = new Date()
                 now = now.getTime()
                     // change last multiple for the number of minutes
-                endTime = now + (1000 * 60 * 5)
+                studyTime = now + (1000 * 60 * 5)
                 showCountDown()
             }
 
             function showCountDown() {
                 var now = new Date()
                 now = now.getTime()
-                if (endTime - now <= 0) {
+                if (studyTime - now <= 0) {
                     stopTimer()
 
                     alert("Time is up.")
                 } else {
-                    var delta = new Date(endTime - now)
+                    var delta = new Date(studyTime - now)
                     var theMin = delta.getMinutes()
                     var theSec = delta.getSeconds()
                     var theTime = theMin
@@ -966,31 +967,30 @@
                 running = false
                 var now = new Date()
                 now = now.getTime()
-                var requiredTime = 300 - (endTime - now) / 1000;
+                var requiredTime = 300 - (studyTime - now) / 1000;
 
                 var send = JSON.stringify({
                     participantId: 1,
                     system: "baseline",
-                    video: "demo",
-                    task: 0,
+                    video: "splatter",
+                    task: 1,
                     time: requiredTime,
-                    answers: answerList.join(' ')
+                    log:logArray
                 });
-                console.log(send);
                 //console.log(requiredTime+" "+answerList);
-                // $.ajax({
-                //     url: '/saveLog',
-                //     type: 'POST',
-                //     data: send,
-                //     contentType: "application/json",
-                //     dataType: 'json',
-                //     success: function(response) {
-                //         console.log(response);
-                //     },
-                //     error: function(error) {
-                //         console.log(error);
-                //     }
-                // });
+                $.ajax({
+                    url: '/saveLog',
+                    type: 'POST',
+                    data: send,
+                    contentType: "application/json",
+                    dataType: 'json',
+                    success: function(response) {
+                        console.log(response);
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
 
             }
 
@@ -1012,11 +1012,71 @@
 
             }
 
-            function logAnswer(){
-                $(".checkbox-inside").click(function(){
+            function logAnswer() {
+                $(".checkbox-inside").click(function() {
                     answerList.push(this.id);
-                });                
-        }
+                });
+            }
+
+            function logEvents() {
+                var startScroll = 0;
+                var endScroll = 0;
+                $(window).scroll($.debounce(250, true, function() {
+                    //console.log("started scroll");
+                    var now = new Date();
+                    now = now.getTime()
+                    startScroll = 300 - ((studyTime - now) / 1000);
+
+                }));
+                $(window).scroll($.debounce(250, function() {
+
+                    //console.log("end scroll");
+                    var now = new Date();
+                    now = now.getTime()
+                    endScroll = 300 - ((studyTime - now) / 1000);
+
+                    var logData = {
+                        startScroll: startScroll,
+                        scrollTime: (endScroll - startScroll)
+                    }
+
+                    logArray.push(logData);
+                    console.log(logData);
+                    //alert((endScroll - startScroll) / 1000)
+                }));
+
+                $(".vjs-progress-holder").on('mouseup', function() {
+
+                    var now = new Date()
+                    now = now.getTime()
+                    var currentStudyTime = 300 - ((studyTime - now) / 1000);
+                    var logData = {
+                        seekBarClickTime: player.currentTime(),
+                        studyTime: currentStudyTime
+                    }
+                    logArray.push(logData);
+                    console.log(logData);
+                });
+
+
+                $(".time-hyperlink").click(function() {
+
+                    var now = new Date()
+                    now = now.getTime()
+                        //alert("start timer");
+                    var currentStudyTime = 300 - ((studyTime - now) / 1000);
+                    var logData = {
+                        commentId: this.id.replace('-hlink',''),
+                        studyTime: currentStudyTime,
+                    }
+                    logArray.push(logData);
+                    console.log(logData);
+                });
+
+
+
+
+            }
 
 
             function initializeCommentContainer() {
@@ -1048,6 +1108,7 @@
                 displayBottomCommentSection("all");
                 CommentClick();
                 timeActivity();
+                logEvents();
 
 
             }

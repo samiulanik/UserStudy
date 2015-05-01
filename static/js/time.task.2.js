@@ -746,7 +746,7 @@
 
         }
 
-        function logClickEvent() {
+        function logEvents() {
 
             var startScroll=0;
             var endScroll=0;
@@ -1066,7 +1066,7 @@
                 video: "fire",
                 task: 2,
                 time: requiredTime,
-                answers: logArray
+                log: logArray
             });
             //console.log(requiredTime+" "+answerList);
             $.ajax({
@@ -1190,7 +1190,7 @@
             getCheckedList()
             timedCommentInteraction();
             initializeColor();
-            logClickEvent();
+            logEvents();
             //findMarkerPositions();
             //addMarkerPosition();
             //commentClick();
