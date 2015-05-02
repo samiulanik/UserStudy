@@ -44,6 +44,7 @@
             var now = null;
             var logArray = [];
             var studyTime = 0;
+            
 
 
 

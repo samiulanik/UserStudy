@@ -208,7 +208,8 @@
                 if (checkTrueList.length == 1) {
 
                     var counter = getCommentPositionCount(marker.time);
-
+                    var nonZeroList = getNonZeroCounter(counter.typeCount);
+                    
                     marker.div.addClass(colorMarker[checkTrueList[0]]).append("<div class='pin-half-fill-inside'></div>")
                         .css({
                             "margin-left": -parseFloat(marker.div.css("width")) / 2 + 'px',
