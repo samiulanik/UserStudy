@@ -44,7 +44,12 @@
         var timerID = null;
         //var now = null;
         var logArray = [];
-
+        var anchorEventLogArray = [];
+        var radioEventLogArray = [];
+        var typeCheckboxEventLogArray = [];
+        var seekbarEventLogArray = [];
+        var commentClickEventLogArray = [];
+        var studyMinutes = 5;
 
 
 
