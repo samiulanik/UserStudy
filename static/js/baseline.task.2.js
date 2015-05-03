@@ -44,6 +44,15 @@
             var now = null;
             var logArray = [];
             var studyTime = 0;
+            var studyMinutes = 5;
+            var studySeconds = studyMinutes * 60;
+            var seekbarClickEventLogArray = [];
+            var commentTimeClickEventLogArray = [];
+            var scrollEventLogArray = [];
+
+
+
+
 
 
 
@@ -936,7 +945,7 @@
                 now = new Date()
                 now = now.getTime()
                     // change last multiple for the number of minutes
-                studyTime = now + (1000 * 60 * 5)
+                studyTime = now + (1000 * studySeconds)
                 showCountDown()
             }
 
@@ -967,15 +976,26 @@
                 running = false
                 var now = new Date()
                 now = now.getTime()
-                var requiredTime = 300 - (studyTime - now) / 1000;
+                var requiredTime = studySeconds - (studyTime - now) / 1000;
+
+                var videoSrc = player.currentSrc();
+                var videoId = videoSrc.replace('http://localhost:5000/static/videos/photoshop_', '')
+                videoId = videoId.replace('.mp4', '')
+                var filePath = window.location.pathname;
+                var filename = filePath.substring(filePath.lastIndexOf('/') + 1);
+                var systemName = filename.replace('_task_2', ' ')
+                var taskNo = filename.replace('baseline_task_', ' ')
 
                 var send = JSON.stringify({
                     participantId: 1,
-                    system: "baseline",
-                    video: "splatter",
-                    task: 2,
+                    system: systemName.replace(/\s/g, ''),
+                    videoId: videoId,
+                    task: parseInt(taskNo),
                     time: requiredTime,
-                    log:logArray
+                    commentTimeClickEventLog: commentTimeClickEventLogArray,
+                    scrollEventLog: scrollEventLogArray,
+                    seekbarClickEvent: seekbarClickEventLogArray
+
                 });
                 //console.log(requiredTime+" "+answerList);
                 $.ajax({
@@ -991,6 +1011,8 @@
                         console.log(error);
                     }
                 });
+
+                player.pause();
 
             }
 
@@ -1025,7 +1047,7 @@
                     //console.log("started scroll");
                     var now = new Date();
                     now = now.getTime()
-                    startScroll = 300 - ((studyTime - now) / 1000);
+                    startScroll = studySeconds - ((studyTime - now) / 1000);
 
                 }));
                 $(window).scroll($.debounce(250, function() {
@@ -1033,14 +1055,14 @@
                     //console.log("end scroll");
                     var now = new Date();
                     now = now.getTime()
-                    endScroll = 300 - ((studyTime - now) / 1000);
+                    endScroll = studySeconds - ((studyTime - now) / 1000);
 
                     var logData = {
-                        startScroll: startScroll,
+                        startScrollTime: startScroll,
                         scrollTime: (endScroll - startScroll)
                     }
 
-                    logArray.push(logData);
+                    scrollEventLogArray.push(logData);
                     console.log(logData);
                     //alert((endScroll - startScroll) / 1000)
                 }));
@@ -1049,12 +1071,12 @@
 
                     var now = new Date()
                     now = now.getTime()
-                    var currentStudyTime = 300 - ((studyTime - now) / 1000);
+                    var currentStudyTime = studySeconds - ((studyTime - now) / 1000);
                     var logData = {
                         seekBarClickTime: player.currentTime(),
-                        studyTime: currentStudyTime
+                        eventTime: currentStudyTime
                     }
-                    logArray.push(logData);
+                    seekbarClickEventLogArray.push(logData);
                     console.log(logData);
                 });
 
@@ -1064,12 +1086,12 @@
                     var now = new Date()
                     now = now.getTime()
                         //alert("start timer");
-                    var currentStudyTime = 300 - ((studyTime - now) / 1000);
+                    var currentStudyTime = studySeconds - ((studyTime - now) / 1000);
                     var logData = {
-                        commentId: this.id.replace('-hlink',''),
-                        studyTime: currentStudyTime,
+                        commentId: this.id.replace('-hlink', ''),
+                        eventTime: currentStudyTime,
                     }
-                    logArray.push(logData);
+                    commentTimeClickEventLogArray.push(logData);
                     console.log(logData);
                 });
 
