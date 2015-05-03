@@ -44,6 +44,14 @@
         var timerID = null;
         //var now = null;
         var logArray = [];
+        var markerClickEventLogArray = [];
+        var radioClickEventLogArray = [];
+        var seekbarClickEventLogArray = [];
+        var commentClickEventLogArray = [];
+        var scrollEventLogArray = [];
+        var studyMinutes = 5;
+        var studySeconds = studyMinutes * 60;
+
 
 
 
@@ -618,14 +626,13 @@
                 var markerTime = markers[id].time;
                 var now = new Date()
                 now = now.getTime()
-                var currentStudyTime = 300 - ((studyTime - now) / 1000)
+                var currentStudyTime = studySeconds - ((studyTime - now) / 1000)
                 var logData = {
                     anchorTime: markers[id].time,
-                    StudyTime: currentStudyTime,
-                    commentCount: getCommentPositionCount(markerTime).sumCount
-
+                    eventTime: currentStudyTime,
+                    numberOfCommentsInMarker: getCommentPositionCount(markerTime).sumCount
                 }
-                logArray.push(logData)
+                markerClickEventLogArray.push(logData)
                 console.log(logData);
                 var textCotentHighlight = "please click the comment to highlight the position inside video."
 
@@ -748,14 +755,14 @@
 
         function logEvents() {
 
-            var startScroll=0;
-            var endScroll=0;
+            var startScroll = 0;
+            var endScroll = 0;
             $(".checkbox").click(function() {
 
                 var now = new Date()
                 now = now.getTime()
                     //alert("start timer");
-                var currentStudyTime = 300 - ((studyTime - now) / 1000);
+                var currentStudyTime = studySeconds - ((studyTime - now) / 1000);
                 var logData = {
                     checkboxId: this.id,
                     checkboxStatus: $('#' + this.id).prop('checked'),
@@ -770,12 +777,13 @@
 
                 var now = new Date()
                 now = now.getTime()
-                var currentStudyTime = 300 - ((studyTime - now) / 1000);
+                var currentStudyTime = studySeconds - ((studyTime - now) / 1000);
                 var logData = {
                     radioId: this.id,
-                    studyTime: currentStudyTime,
+                    radioClickTime: currentStudyTime
+
                 }
-                logArray.push(logData);
+                radioClickEventLogArray.push(logData);
                 console.log(logData);
             });
 
@@ -783,12 +791,12 @@
 
                 var now = new Date()
                 now = now.getTime()
-                var currentStudyTime = 300 - ((studyTime - now) / 1000);
+                var currentStudyTime = studySeconds - ((studyTime - now) / 1000);
                 var logData = {
-                    seekBarClickTime: player.currentTime(),
-                    studyTime: currentStudyTime
+                    seekbarPoisitionTime: player.currentTime(),
+                    seekBarClickTime: currentStudyTime
                 }
-                logArray.push(logData);
+                seekbarClickEventLogArray.push(logData);
                 console.log(logData);
             });
 
@@ -796,7 +804,7 @@
                 //console.log("started scroll");
                 var now = new Date();
                 now = now.getTime()
-                startScroll = 300 - ((studyTime - now) / 1000);
+                startScroll = studySeconds - ((studyTime - now) / 1000);
 
             }));
             $(".comment-container").scroll($.debounce(250, function() {
@@ -804,15 +812,17 @@
                 //console.log("end scroll");
                 var now = new Date();
                 now = now.getTime()
-                endScroll = 300 - ((studyTime - now) / 1000);
+                endScroll = studySeconds - ((studyTime - now) / 1000);
 
-                var logData = {startScroll: startScroll, scrollTime: (endScroll-startScroll)}
+                var logData = {
+                    scrollStartTime: startScroll,
+                    scrollTime: (endScroll - startScroll)
+                }
 
-                logArray.push(logData);
+                scrollEventLogArray.push(logData);
                 console.log(logData);
                 //alert((endScroll - startScroll) / 1000)
             }));
-
 
         }
 
@@ -1027,7 +1037,7 @@
             var now = new Date()
             var now = now.getTime()
                 // change last multiple for the number of minutes
-            studyTime = now + (1000 * 60 * 5)
+            studyTime = now + (1000 * studySeconds)
             showCountDown()
         }
 
@@ -1058,16 +1068,31 @@
             running = false
             var now = new Date()
             now = now.getTime()
-            var requiredTime = 300 - (studyTime - now) / 1000;
+            var requiredTime = studySeconds - (studyTime - now) / 1000;
+            //var logDump = JSON.stringify(logArray);
+            var videoSrc = player.currentSrc();
+            var videoId = videoSrc.replace('http://localhost:5000/static/videos/photoshop_','')
+            videoId = videoId.replace('.mp4','')
+            var filePath = window.location.pathname;
+            var filename = filePath.substring(filePath.lastIndexOf('/')+1);
+            var systemName = filename.replace('_task_1',' ') 
+            var taskNo = filename.replace('time_task_',' ')
+            //console.log(videoId + " "+ systemName);
             //var logDump = JSON.stringify(logArray);
             var send = JSON.stringify({
                 participantId: 1,
-                system: "time",
-                video: "fire",
-                task: 1,
+                system: systemName.replace(/\s/g, ''),
+                videoId: videoId,
+                task: parseInt(taskNo),
                 time: requiredTime,
-                log: logArray
+                markerClickEventLog: markerClickEventLogArray,
+                radioClickEventLog: radioClickEventLogArray,
+                seekbarClickEventLog: seekbarClickEventLogArray,
+                scrollEventLog:scrollEventLogArray
+
+                
             });
+            
             //console.log(requiredTime+" "+answerList);
             $.ajax({
                 url: '/saveLog',
@@ -1076,12 +1101,14 @@
                 contentType: "application/json",
                 dataType: 'json',
                 success: function(response) {
-                   // console.log(response);
+                    // console.log(response);
                 },
                 error: function(error) {
                     //console.log(error);
                 }
             });
+
+            player.pause();
 
         }
 
