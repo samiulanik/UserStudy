@@ -194,7 +194,7 @@
     {
         "userName": "BO",
         "time": 136,
-        "text": "i dont have \"content aware\" im using PS CS4, please help!",
+        "text": "i dont have \"content aware\" im using elements 13, please help!",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "se26"
@@ -202,7 +202,7 @@
     {
         "userName": "BLT",
         "time": 136,
-        "text": "borjeez...Content aware is not available in versions under CS5.",
+        "text": "I can not find content aware in elements 13!! Why??! please help!!",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "se27"
@@ -210,7 +210,7 @@
     {
         "userName": "UU",
         "time": 136,
-        "text": "Where is content aware in my fill? I can't find it!! please help me I am using PSE 11 ",
+        "text": "Where is content aware in my fill? I can't find it!! please help me I am using elements 13 ",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "se28"
@@ -410,7 +410,7 @@
     {
         "userName": "DLK",
         "time": -1,
-        "text": "Umm will all of this work the same way on my photoshop cs5 ?",
+        "text": "Umm will all of this work the same way on my elements 13 ?",
         "type": "question",
         "contentPosition": "none",
         "commentId": "se53"
@@ -642,7 +642,7 @@
     {
         "userName": "BLT",
         "time": 104,
-        "text": "Make sure the correct layer is active.",
+        "text": "I am having trouble with content aware in my spanish version photoshop! need help plzzz",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "se101"
@@ -651,7 +651,7 @@
     {
         "userName": "NK",
         "time": 230,
-        "text": "Please marty , Upload a zip file containing all your brushes.. #Request",
+        "text": "can't load the brush!! please need help!!",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "se81"
@@ -804,7 +804,7 @@
         "userName": "WP",
         "time": 278,
         "text": "Hopefully you pressed on the white side of the picture layer you choose, and not THE piucture but the white picture beside it you had to make :)",
-        "type": "troubleshooting",
+        "type": "suggestion",
         "contentPosition": "none",
         "commentId": "se102"
     },
@@ -890,7 +890,7 @@
      {
         "userName": "L",
         "time": 180,
-        "text": "I have a suggestion, the photoshop elements user can find liquify under filter->distort.",
+        "text": "I have a suggestion, the photoshop elements 13 user can find liquify under filter->distort.",
         "type": "suggestion",
         "contentPosition": "none",
         "commentId": "se112"
@@ -915,7 +915,7 @@
     {
         "userName": "AA",
         "time": 231,
-        "text": "photoshop element 11 users be careful. the brush size in thumbnail is not like cs6.",
+        "text": "photoshop cs4 users be careful. the brush size in thumbnail is not like cs6.",
         "type": "suggestion",
         "contentPosition": "none",
         "commentId": "se115"
@@ -924,7 +924,7 @@
       {
         "userName": "AB",
         "time": 138,
-        "text": "in photoshop element 13 the selection for content aware inside fill is bit different. same technique would not work in there. users have to use different tool for that. ",
+        "text": "in photoshop elements 13 the selection for content aware inside fill is bit different. same technique would not work in there. users have to use different tool for that. ",
         "type": "suggestion",
         "contentPosition": "none",
         "commentId": "se116"
