@@ -310,7 +310,7 @@
         "userName": "H",
         "time": 209,
         "text": "No the trial version is complete and works just the same.  There has to be a missed step or an added one. If you make sure your mask layer is selected and you are using black as well your opacity of the brush is 100 it will work in all versions.?",
-        "type": "troubleshooting",
+        "type": "suggestion",
         "contentPosition": "none",
         "commentId": "t46"
     }, {
@@ -542,7 +542,7 @@
     }, {
         "userName": "0",
         "time": 314,
-        "text": "Hi, I'm having a problem with this.I managed to do this succesfully for 1 picture, when I tried doing it for a new one on another pile of layers, I simply see myself going over the picture with the brush, it does nothing, when I choose a pen, it simply gums the picture away.I double checked eveything, I did it the same way as for the first one.?",
+        "text": "Hi, I'm having a problem with this. The brush option is not working for CS3! Is their any way to make the brush work?",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "t79"
@@ -690,14 +690,14 @@
     {
         "userName": "H",
         "time": 63,
-        "text": "I does not let me paint in my PS CS6!! why is that happening!! I am totally stuck man!!",
+        "text": "I does not let me paint in my PS CC!! why is that happening!! I am totally stuck man!!",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "t100"
     }, {
         "userName": "0",
         "time": 314,
-        "text": "I can not flatten the image it says \"it says the layer is locked!!\" ",
+        "text": "I can not flatten the image in photoshop CC it says \"it says the layer is locked!!\" ",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "t101"
@@ -715,7 +715,7 @@
     {
         "userName": "M",
         "time": 231,
-        "text": "Why my photoshop is making me paint on the background using this brush? I have tried many things not working for me in this step. Someone care to listen to me? hlppp",
+        "text": "Why my photoshop is not allowing me to use the brush? I have tried many things not working for me in this step. Someone care to listen to me? hlppp",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "t103"
@@ -734,7 +734,7 @@
     {
         "userName": "I",
         "time": 204,
-        "text": "The brush is not good enough to paint!! it's kinda creating a blurry image! Why is that happening??!! I am stuck :(",
+        "text": "The brush is not good enough to paint in my PS CC!! it's kinda creating a blurry image! Why is that happening??!! I am stuck :(",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "t105"
@@ -743,7 +743,7 @@
     {
         "userName": "L",
         "time": 204,
-        "text": "When I try to paint with the brush the opacity automatically changes. Why it is changing. Because of it I am not getting a good output. Care to solve the problem anyone??",
+        "text": "When I try to paint with the opacity in photoshop CC automatically changes. Why it is changing. Because of it I am not getting a good output. Care to solve the problem anyone??",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "t106"
@@ -783,7 +783,7 @@
     {
         "userName": "FF",
         "time": 219,
-        "text": "Photoshop CC version has lots of different brushes! user those! I got beautiful output!!",
+        "text": "I have a suggestion! Photoshop CC version has lots of different brushes! user those! I got beautiful output!!",
         "type": "suggestion",
         "contentPosition": "none",
         "commentId": "t109"
