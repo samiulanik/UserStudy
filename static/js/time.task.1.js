@@ -641,9 +641,9 @@
                     if (markerTime == commentList[i].markerPositionTime && commentList[i].markerPositionTime != -1 && $.inArray(commentList[i].type, checkTrueList) != -1) {
 
                         if (commentList[i].contentPosition == "none")
-                            commentContainer.append("<li class ='vjs-comment-list' id='" + commentList[i].key + "<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "</div></div></div></li>")
+                            commentContainer.append("<li class ='vjs-comment-list' id='" + commentList[i].key+"'" + "<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "</div></div></div></li>")
                         else
-                            commentContainer.append("<li class ='vjs-comment-list' id='" + commentList[i].key + "<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "<br> <span style='color:#ff0000;'>" + textCotentHighlight + "</span></div></div></div></li>")
+                            commentContainer.append("<li class ='vjs-comment-list' id='" + commentList[i].key +"'" +"<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "<br> <span style='color:#ff0000;'>" + textCotentHighlight + "</span></div></div></div></li>")
 
 
                         commentContainer.css({
@@ -693,6 +693,8 @@
 
             $(document).on('click', 'li', function(event) {
 
+                console.log("checking commentCLick 1")
+
                 for (var i = 0; i < commentList.length; i++) {
                     if (commentList[i].key == this.id && commentList[i].markerPositionTime != -1 && commentList[i].contentPosition != "none") {
                         //console.log(this.id);
@@ -716,6 +718,8 @@
 
 
             $(document).on('mouseover', 'li', function(event) {
+
+                //console.log("checking commentCLick 2")
 
                 for (var i = 0; i < commentList.length; i++) {
                     if (commentList[i].key == this.id && commentList[i].markerPositionTime != -1 && commentList[i].contentPosition != "none")
@@ -1220,7 +1224,7 @@
             logEvents();
             //findMarkerPositions();
             //addMarkerPosition();
-            //commentClick();
+            commentClick();
             //displayBottomCommentSection("all");
             displaySideCommentSection("all");
             //saveAnswer();
