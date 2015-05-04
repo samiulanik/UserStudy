@@ -51,7 +51,7 @@
         var commentClickEventLogArray = [];
         var scrollEventLogArray = [];
         var studyMinutes = 10;
-        var studySeconds = studyMinutes*60;
+        var studySeconds = studyMinutes * 60;
 
 
 
@@ -708,8 +708,21 @@
                         var y2 = parseInt(temp[1], 10);
 
 
+                        var now = new Date()
+                        now = now.getTime()
+                            //alert("start timer");
+                        var currentStudyTime = studySeconds - ((studyTime - now) / 1000);
+
+                        var commentId = commentList[i].key;
+
+                        var logData = {commentId: commentId, eventTime: currentStudyTime }
+
+                        commentClickEventLogArray.push(logData);
+
 
                         contentHightlight(x1 - 500, y1, x2, y2);
+
+
                     }
                 }
             });
@@ -757,8 +770,8 @@
 
         function logEvents() {
 
-            var startScroll=0;
-            var endScroll=0;
+            var startScroll = 0;
+            var endScroll = 0;
             $(".checkbox").click(function() {
 
                 var now = new Date()
@@ -816,7 +829,10 @@
                 now = now.getTime()
                 endScroll = studySeconds - ((studyTime - now) / 1000);
 
-                var logData = {scrollStartTime: startScroll, scrollTime: (endScroll-startScroll)}
+                var logData = {
+                    scrollStartTime: startScroll,
+                    scrollTime: (endScroll - startScroll)
+                }
 
                 scrollEventLogArray.push(logData);
                 console.log(logData);
@@ -1070,14 +1086,14 @@
             now = now.getTime()
             var requiredTime = studySeconds - (studyTime - now) / 1000;
             var videoSrc = player.currentSrc();
-            var videoId = videoSrc.replace('http://localhost:5000/static/videos/photoshop_','')
-            videoId = videoId.replace('.mp4','')
+            var videoId = videoSrc.replace('http://localhost:5000/static/videos/photoshop_', '')
+            videoId = videoId.replace('.mp4', '')
             var filePath = window.location.pathname;
-            var filename = filePath.substring(filePath.lastIndexOf('/')+1);
-            var systemName = filename.replace('_task_3',' ') 
-            var taskNo = filename.replace('categorization_task_',' ')
-            //console.log(videoId + " "+ systemName);
-            //var logDump = JSON.stringify(logArray);
+            var filename = filePath.substring(filePath.lastIndexOf('/') + 1);
+            var systemName = filename.replace('_task_1', ' ')
+            var taskNo = filename.replace('categorization_task_', ' ')
+                //console.log(videoId + " "+ systemName);
+                //var logDump = JSON.stringify(logArray);
             var send = JSON.stringify({
                 participantId: 1,
                 system: systemName.replace(/\s/g, ''),
@@ -1088,9 +1104,9 @@
                 radioClickEventLog: radioClickEventLogArray,
                 typeCheckboxClickEventLog: typeCheckboxClickEventLogArray,
                 seekbarClickEventLog: seekbarClickEventLogArray,
-                scrollEventLog:scrollEventLogArray
+                scrollEventLog: scrollEventLogArray,
+                commentClickEventLog: commentClickEventLogArray
 
-                
             });
             //console.log(requiredTime+" "+answerList);
             $.ajax({
@@ -1100,7 +1116,7 @@
                 contentType: "application/json",
                 dataType: 'json',
                 success: function(response) {
-                   // console.log(response);
+                    // console.log(response);
                 },
                 error: function(error) {
                     //console.log(error);

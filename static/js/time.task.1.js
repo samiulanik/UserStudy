@@ -701,6 +701,15 @@
                         var x1 = event.pageX;
                         var y1 = event.pageY;
 
+                        var currentStudyTime = studySeconds - ((studyTime - now) / 1000);
+
+                        var commentId = commentList[i].key;
+
+                        var logData = {commentId: commentId, eventTime: currentStudyTime }
+
+                        commentClickEventLogArray.push(logData);
+
+
 
 
                         var temp = commentList[i].contentPosition.match(/[0-9]+/g);

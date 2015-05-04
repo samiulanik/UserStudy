@@ -641,9 +641,9 @@
                     if (markerTime == commentList[i].markerPositionTime && commentList[i].markerPositionTime != -1 && $.inArray(commentList[i].type, checkTrueList) != -1) {
 
                         if (commentList[i].contentPosition == "none")
-                            commentContainer.append("<li class ='vjs-comment-list' id='" + commentList[i].key + "<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "</div></div></div></li>")
+                            commentContainer.append("<li class ='vjs-comment-list' id='" + commentList[i].key+"'" + "<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "</div></div></div></li>")
                         else
-                            commentContainer.append("<li class ='vjs-comment-list' id='" + commentList[i].key + "<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "<br> <span style='color:#ff0000;'>" + textCotentHighlight + "</span></div></div></div></li>")
+                            commentContainer.append("<li class ='vjs-comment-list' id='" + commentList[i].key +"'" +"<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "<br> <span style='color:#ff0000;'>" + textCotentHighlight + "</span></div></div></div></li>")
 
 
                         commentContainer.css({
@@ -693,11 +693,22 @@
 
             $(document).on('click', 'li', function(event) {
 
+                console.log("checking commentCLick 1")
+
                 for (var i = 0; i < commentList.length; i++) {
                     if (commentList[i].key == this.id && commentList[i].markerPositionTime != -1 && commentList[i].contentPosition != "none") {
                         //console.log(this.id);
                         var x1 = event.pageX;
                         var y1 = event.pageY;
+
+                        var currentStudyTime = studySeconds - ((studyTime - now) / 1000);
+
+                        var commentId = commentList[i].key;
+
+                        var logData = {commentId: commentId, eventTime: currentStudyTime }
+
+                        commentClickEventLogArray.push(logData);
+
 
 
 
@@ -716,6 +727,8 @@
 
 
             $(document).on('mouseover', 'li', function(event) {
+
+                //console.log("checking commentCLick 2")
 
                 for (var i = 0; i < commentList.length; i++) {
                     if (commentList[i].key == this.id && commentList[i].markerPositionTime != -1 && commentList[i].contentPosition != "none")
@@ -1075,7 +1088,7 @@
             videoId = videoId.replace('.mp4','')
             var filePath = window.location.pathname;
             var filename = filePath.substring(filePath.lastIndexOf('/')+1);
-            var systemName = filename.replace('_task_2',' ') 
+            var systemName = filename.replace('_task_1',' ') 
             var taskNo = filename.replace('time_task_',' ')
             //console.log(videoId + " "+ systemName);
             //var logDump = JSON.stringify(logArray);
@@ -1220,7 +1233,7 @@
             logEvents();
             //findMarkerPositions();
             //addMarkerPosition();
-            //commentClick();
+            commentClick();
             //displayBottomCommentSection("all");
             displaySideCommentSection("all");
             //saveAnswer();
