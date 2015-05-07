@@ -1310,7 +1310,29 @@
                     }
 
 
-                } else {
+                } else if (timeType == "general"){
+
+                    if (checked) {
+
+                        for (var key in checkList) {
+                            checkList[key] = true;
+                        }
+                        removeMarkers();
+                        getCheckedList();
+                        //findMarkerPositions();
+                        //addMarkerPosition();
+                        //displayBottomCommentSection();
+                        //commentClick();
+                        displaySideCommentSection("general")
+                    } else {
+                        for (var key in checkList) {
+                            checkList[key] = false;
+                        }
+                        removeMarkers();
+
+                    }
+
+                } else if (timeType == "time"){
 
                     if (checked) {
 
@@ -1323,6 +1345,7 @@
                         addMarkerPosition();
                         //displayBottomCommentSection();
                         commentClick();
+                        //displaySideCommentSection("general")
                     } else {
                         for (var key in checkList) {
                             checkList[key] = false;
@@ -1331,7 +1354,7 @@
 
                     }
 
-                }
+                } 
 
 
 
