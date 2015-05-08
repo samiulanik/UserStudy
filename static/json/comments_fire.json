@@ -322,7 +322,7 @@
  "userName":"RM",
 "time": -1,
 "text":"Excellent tutorial, but I have a problem as I am a beginner. I've created  the same text as shown in the clip above (looks good in my opinion).  However I really want to use the text as a font and add more text, but the  layers obviously only work on the letters above. Does somebody know if it's  possible to now use this font in for example after effects.. I need it for  a short movie I'm making. Thanks!!",
-"type":"question",
+"type":"troubleshooting",
 "contentPosition":"350",
 "commentId":"fe32" 
 
@@ -574,7 +574,7 @@
 {
  "userName":"NXH",
 "time": 58,
-"text":"I can not find that font",
+"text":"I can not find that font.",
 "type":"troubleshooting",
 "contentPosition":"none",
 "commentId":"fe55" 
@@ -651,7 +651,7 @@
 {
  "userName":"AS",
 "time": -1,
-"text":"nice video i likes these. wokred perfectly for CS5!!",
+"text":"nice video i likes these. wokred perfectly for CS3!!",
 "type":"appreciation",
 "contentPosition":"none",
 "commentId":"fe62" 
@@ -840,7 +840,7 @@
 {
  "userName":"PT",
 "time": -1,
-"text":"+The Norwegian Squirrel Thanks man! Sorry about the late reply. But the font I used is called \"bebas neue\"",
+"text":"+TNS Thanks man! Sorry about the late reply. But the font I used is called \"bebas neue\"",
 "type":"appreciation",
 "contentPosition":"none",
 "commentId":"fe81" 
@@ -886,7 +886,7 @@
 {
 "userName":"B",
 "time": 126,
-"text":"I am having some kind of font error in CS5. saying me to disable fonts! plzzz help!!",
+"text":"I am having some kind of font error in CS5. saying to me is  \"disabled fonts!\" plzzz help!!",
 "type":"troubleshooting",
 "contentPosition":"none",
 "commentId":"fe86" 
@@ -895,7 +895,7 @@
 {
 "userName":"C",
 "time": 126,
-"text":"I am also having the same font error. need help!!",
+"text":"I am also having the same font error. saying it can't find the fonts need help!!",
 "type":"troubleshooting",
 "contentPosition":"none",
 "commentId":"fe87" 
@@ -1163,7 +1163,7 @@
 {
 "userName":"YY",
 "time": 60,
-"text":"I am trying to get same type of typeface in gimp. but could not find it!! can anyone solve that for me plzzzzz!!",
+"text":"I am trying to get same type of font in gimp. but could not find it!! can anyone solve that for me plzzzzz!!",
 "type":"troubleshooting",
 "contentPosition":"none",
 "commentId":"fe118" 

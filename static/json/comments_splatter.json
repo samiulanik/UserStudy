@@ -97,8 +97,8 @@
     },
     {
         "userName": "HB",
-        "time": -1,
-        "text": "I don't have blur?",
+        "time": 150,
+        "text": "I don't have blur. Is there any alternative of blur?",
         "type": "question",
         "contentPosition": "none",
         "commentId": "se13"
@@ -106,7 +106,7 @@
     {
         "userName": "PM",
         "time": -1,
-        "text": "Keep getting told its not available on iPad :(",
+        "text": "Keep getting told its not available on iPad :(. What to do man? solution plzz",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "se14"
@@ -122,7 +122,7 @@
     {
         "userName": "BLT",
         "time": -1,
-        "text": "Paul Mullins...The devices that don't support monetization, don't support  my efforts, financially. Therefore, they will no longer appear on devices  that aren't \"monetized\". My revenue is generated from each view via the ads  placed at the beginning of each tutorial by Google Adsense. Examples of  monetized platforms are YouTube(dot)com & YT native apps on Android, Xbox &  GoogleTV. ",
+        "text": "PM...The devices that don't support monetization, don't support  my efforts, financially. Therefore, they will no longer appear on devices  that aren't \"monetized\". My revenue is generated from each view via the ads  placed at the beginning of each tutorial by Google Adsense. Examples of  monetized platforms are YouTube(dot)com & YT native apps on Android, Xbox &  GoogleTV. ",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "se17"
@@ -137,8 +137,8 @@
     },
     {
         "userName": "BLT",
-        "time": -1,
-        "text": "Haris Brkic...The selection surrounding your subject must be on the  original photo & the selection must be expanded enough. ",
+        "time": 42,
+        "text": "Is there any alternative to quick selection tool?",
         "type": "question",
         "contentPosition": "none",
         "commentId": "se19"
@@ -266,7 +266,7 @@
     {
         "userName": "A",
         "time": -1,
-        "text": "i need that photo plzz ",
+        "text": "Can anyone send me the proper link of the photo?",
         "type": "question",
         "contentPosition": "none",
         "commentId": "se35"
@@ -282,7 +282,7 @@
     {
         "userName": "BLT",
         "time": -1,
-        "text": "Stefan Stankovic...The link for the image is located in the video's  description.",
+        "text": "A...The link for the image is located in the video's  description.",
         "type": "question",
         "contentPosition": "none",
         "commentId": "se37"
@@ -322,7 +322,7 @@
     {
         "userName": "TL",
         "time": 136,
-        "text": "my photo shop is cs3 and i don't have Content-Aware so what do i do",
+        "text": "my photo shop is cs3 and i don't have Content-Aware so what do i do?",
         "type": "question",
         "contentPosition": "none",
         "commentId": "se42"
@@ -330,7 +330,7 @@
     {
         "userName": "BLT",
         "time": 136,
-        "text": "Lian Thawn...Use other tools like Clone Stamp, Patch & Healing brushes.",
+        "text": "TL...Use other tools like Clone Stamp, Patch & Healing brushes.",
         "type": "question",
         "contentPosition": "none",
         "commentId": "se43"
@@ -386,7 +386,7 @@
     {
         "userName": "BLT",
         "time": 230,
-        "text": "rahul g...As I mentioned in the tut, go to brusheezy(dot)com or other  Photoshop brush websites to download splatter brushes. There are many from  which to choose.",
+        "text": "RG...As I mentioned in the tut, go to brusheezy(dot)com or other  Photoshop brush websites to download splatter brushes. There are many from  which to choose.",
         "type": "question",
         "contentPosition": "none",
         "commentId": "se50"
@@ -418,7 +418,7 @@
     {
         "userName": "BLT",
         "time": -1,
-        "text": "Katie Aurora...It's been a while since I worked in CS5, but I think it'll  work the same.",
+        "text": "KA...It's been a while since I worked in CS5, but I think it'll  work the same.",
         "type": "question",
         "contentPosition": "none",
         "commentId": "se54"
@@ -562,8 +562,8 @@
     {
         "userName": "MS",
         "time": 136,
-        "text": "It won't let me fill!!!",
-        "type": "troubleshooting",
+        "text": "Is there any alternative to fill?",
+        "type": "question",
         "contentPosition": "none",
         "commentId": "se72"
     },
@@ -684,7 +684,7 @@
         "userName": "A",
         "time": 105,
         "text": "I use PSE11 and I don't have the option for content aware.  It gives me  black, white, or 50%.  What should I use?",
-        "type": "question",
+        "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "se85"
     },

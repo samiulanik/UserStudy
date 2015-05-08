@@ -535,7 +535,7 @@
     }, {
         "userName": "H",
         "time": 62,
-        "text": "Okay instead of copy paste try to drag the second image from the folder it's in right on top of the first image which is already open in photoshop.?",
+        "text": "Okay instead of copy paste try to drag the second image from the folder it's in right on top of the first image which is already open in photoshop.",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "t78"
@@ -549,7 +549,7 @@
     }, {
         "userName": "H",
         "time": 214,
-        "text": "If you see your paint strokes actually showing up on the image then you need to make sure you have the layer mask selected.  On the layer you are painting on you should see a small thumbnail of the image and to the right of that a small thumbnail of the mask which will either be all white or all black. Make sure you click directly on the mask thumbnail and then paint.?",
+        "text": "If you see your paint strokes actually showing up on the image then you need to make sure you have the layer mask selected.  On the layer you are painting on you should see a small thumbnail of the image and to the right of that a small thumbnail of the mask which will either be all white or all black. Make sure you click directly on the mask thumbnail and then paint.",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "t80"
@@ -623,7 +623,7 @@
     }, {
         "userName": "D",
         "time": 217,
-        "text": "What is the shortcut for bringing the brush pallet? I did not get it.",
+        "text": "What is the shortcut for bringing the brush pallet? ",
         "type": "question",
         "contentPosition": "none",
         "commentId": "t91"
@@ -766,7 +766,7 @@
         "text": "In photoshop elements 2011 it is difficult to control the opacity option. I would suggest to be careful when you are using brush.",
         "type": "suggestion",
         "contentPosition": "none",
-        "commentId": "t107"
+        "commentId": "t118"
     },
 
 
