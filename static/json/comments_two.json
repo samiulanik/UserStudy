@@ -534,8 +534,8 @@
         "commentId": "t77"
     }, {
         "userName": "H",
-        "time": 62,
-        "text": "Okay instead of copy paste try to drag the second image from the folder it's in right on top of the first image which is already open in photoshop.",
+        "time": -1,
+        "text": "This tutorial is not working for CS2! Why?? Please help!!!",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "t78"
@@ -643,8 +643,8 @@
         "commentId": "t93"
     }, {
         "userName": "Sp",
-        "time": 294,
-        "text": "I could not find the move tool please help!!",
+        "time": -1,
+        "text": "The commands are different in elements! I need some help!!",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "t94"
@@ -657,7 +657,7 @@
         "commentId": "t95"
     }, {
         "userName": "JP",
-        "time": 210,
+        "time": -1,
         "text":"here is a link to put two pictures together in paint! https://www.youtube.com/watch?v=IgmfXLzGt2I",
         "type": "link",
         "contentPosition": "none",
@@ -666,7 +666,7 @@
         "userName": "AP",
         "time": 120,
         "text": " I think you need explain the shift key thing more clearly. I got confused!",
-        "type": "suggesion",
+        "type": "suggestion",
         "contentPosition": "none",
         "commentId": "t97"
     }, {
@@ -680,8 +680,8 @@
 
     {
         "userName": "H",
-        "time": 63,
-        "text": "When I copy paste it it does not create a new layer. Why is that happening? Can any one solve that?",
+        "time": -1,
+        "text": "It is not working in Elements 13!! Why?? please help!!",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "t99"
@@ -689,8 +689,8 @@
 
     {
         "userName": "H",
-        "time": 63,
-        "text": "I does not let me paint in my PS CC!! why is that happening!! I am totally stuck man!!",
+        "time": -1,
+        "text": "my Photoshop CC is crashing! why??",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "t100"
@@ -763,8 +763,8 @@
     {
         "userName": "FF",
         "time": 273,
-        "text": "In photoshop elements 2011 it is difficult to control the opacity option. I would suggest to be careful when you are using brush.",
-        "type": "suggestion",
+        "text": "I am having problem with opacity in elements 13!! please help!!",
+        "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "t118"
     },
@@ -821,8 +821,8 @@
 
     {
         "userName": "99",
-        "time": 217,
-        "text": "I am trying to do this thing in gimp. I was able to everything but got stuck in this step. I am really stuck :'(",
+        "time": -1,
+        "text": "I am trying it in GIMP it not working :'(. Anyone have any solution?",
         "type": "troubleshooting",
         "contentPosition": "none",
         "commentId": "t113"

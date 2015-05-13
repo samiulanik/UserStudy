@@ -905,9 +905,9 @@
     },
     {
         "userName": "M",
-        "time": 256,
-        "text": "This thing can be done without using splatter brush. Instead splash image with thresholding the adjustment layer same thing can be done. I have done it in latest Photoshop CC.",
-        "type": "suggesion",
+        "time": -1,
+        "text": "Is it possible to do it in Photoshop CC?",
+        "type": "question",
         "contentPosition": "none",
         "commentId": "se114"
     },

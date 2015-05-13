@@ -196,7 +196,7 @@
  "userName":"P",
 "time": -1,
 "text":"Thanks dude",
-"type":"a",
+"type":"appreciation",
 "contentPosition":"none",
 "commentId":"fe19" 
 
@@ -207,7 +207,7 @@
  "userName":"NSN",
 "time": -1,
 "text":"its rocks",
-"type":"a",
+"type":"appreciation",
 "contentPosition":"none",
 "commentId":"fe20" 
 
@@ -399,7 +399,7 @@
  "userName":"L",
 "time": 63,
 "text":"did it bother anyone else that the word fire wasnt centered",
-"type":"quesion",
+"type":"question",
 "contentPosition":"none",
 "commentId":"fe39" 
 
