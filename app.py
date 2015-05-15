@@ -3,7 +3,7 @@ from flask import Flask,render_template, request,json
 import json
 
 app = Flask(__name__)
-
+fileName="participant_1"
 @app.route('/')
 def hello():
     return 'Welcome to Python Flask!'
@@ -80,7 +80,7 @@ def saveLog():
     #print"working!!";
     content = request.json    
     #print(content.get('time'))
-    outfile = open('data.txt', 'a')
+    outfile = open(fileName+'.txt', 'a')
     json.dump(content,outfile)
     outfile.write('\n')
     

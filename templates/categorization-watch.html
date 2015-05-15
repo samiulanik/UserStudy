@@ -11,10 +11,9 @@
 <body style="background-color: #F8F8F8; height:100vh;">
     <div class="container" style="position: relative; height:100%">
         <div style="position: relative; left: 0px; height: 10vh; width: 100%;">
-           <!--  <p style="position: relative; left: 35vw; font-size: 3vh; top:50%; color: red;">Find commments with the keyword "paint"</p>
-            <INPUT TYPE="button" id="startTimeButton" class=a"btn" VALUE="Start" style="position: relative; left: 64vw; top:-1vh; "  >
-            <INPUT TYPE="button" id="submitAnswerButton" class="btn" VALUE="Submit" style="position: relative; left: 65vw; top:-.9vh; " >
-            <p id="timeDisplay" style="position: relative; left: 75vw; top:-6.8vh; font-size: 3vh; color:blue; "> </p> -->
+            <!-- <INPUT TYPE="button" id="startTimeButton" class="btn" VALUE="Start" style="position: relative; left: 40vw; top:5vh; " />
+            <INPUT TYPE="button" id="submitAnswerButton" class="btn" VALUE="Submit" style="position: relative; left: 45vw; top:5vh; " />
+            <p id="timeDisplay" style="position: relative; left: 60vw; top: -1vh; font-size: 3vh; color:blue; "> </p> -->
         </div>
         <div style="position: relative; left: 0px;  width: 23vw;">
             <ul style="list-style:none;padding:2px; border: 2px solid black; width: 95%; height: 35vh; background-color: white;">
@@ -54,25 +53,25 @@
                 </li>
             </ul>
             <br>
-            <ul style="list-style:none;padding:0.5px; border: 2px solid black; width: 22vw; height: 17vh; background-color: white;">
-                <!-- <li>
-                    <input type="radio" class="radio-button" id="total-checked" style="top: 435px; position:absolute;" name="comment-type" value="all" />
-                    <h3 id="total-text" style="top: 415px;">Show All Comments</h3>
-                </li>
-                 --><li style="position:relative;">
-                    <input type="radio" class="radio-button" id="general-checked" style="top:4.5vh; position:relative;" name="comment-type" value="general" />
-                    <h3 id="general-text" style="top: 2.5vh; ">Show General Comments Only</h3>
+            <ul style="list-style:none;padding:0.5px; border: 2px solid black; width: 22vw; height: 20vh; background-color: white;">
+                <li>
+                    <input type="radio" class="radio-button" id="total-checked" style="top: 45vh; position:absolute;" name="comment-type" value="all" />
+                    <h3 id="total-text" style="top: 43vh;">Show All Comments</h3>
                 </li>
                 <li style="position:relative;">
-                    <input type="radio" class="radio-button" id="timed-checked" style="top: 7vh; position:relative" name="comment-type" value="time" />
-                    <h3 id="timed-text" style="top: 5vh; ">Show Timed Comments Only</h3>
+                    <input type="radio" class="radio-button" id="general-checked" style="top:7.5vh; position:relative;" name="comment-type" value="general" />
+                    <h3 id="general-text" style="top: 5.5vh; ">Show General Comments Only</h3>
+                </li>
+                <li style="position:relative;">
+                    <input type="radio" class="radio-button" id="timed-checked" style="top: 9.5vh; position:relative" name="comment-type" value="time" />
+                    <h3 id="timed-text" style="top: 7.5vh; ">Show Timed Comments Only</h3>
                 </li>
             </ul>
         </div>
         <div id="line" style="z-index: 1000000; position:absolute; left:22.5vw; top:0px"></div>
         <div class="video-container" style=" position: absolute; left: 22.5vw; top: 11.5vh;">
             <video id="photoshop_video_tutorial" controls preload="none" class="video-js vjs-default-skin" width="1200" height="675">
-                <source src="static/videos/photoshop_two.mp4" type="video/mp4">
+                <source src="static/videos/photoshop_demo.mp4" type="video/mp4">
             </video>
         </div>
         <div class="comment-container" style="position: absolute; left: 85vw; top: 11.5vh;"></div>
@@ -93,22 +92,27 @@
             <p id="content-hightlight-text" style=" position:relative;left:23vw; top: -23vh; visibility:hidden; color: red; font-size:15px;">Please click inside video to highlight the content </p>
         </div>
         <!-- div class="comment-container-below" style="position: absolute; left:430px ; top: 950px; width: 1200px; visibility:visible;"> </div>
-        --> 
+        -->
     </div>
 </body>
 <script src="static/js/video.js"></script>
 <script src="static/js/jquery-1.11.1.js"></script>
 <script src="static/js/jquery-ui.js"></script>
-<script src="static/js/categorization.watch.js"></script>
+<script src="static/js/jquery.debounce.js"></script>
+<script src="static/js/categorization.demo.js"></script>
 <script src="static/js/svg.js"></script>
 <script>
-// initialize video.js
-
 var player = videojs('photoshop_video_tutorial');
 var markers = [];
 var counters = [];
 //var contentPosition;
 var totalComment = 0;
+var running = false;
+var endTime = null;
+var timerID = null;
+var now = null;
+
+
 
 function readJson(callback) {
     $.getJSON('static/json/comments_two.json', function(data) {
@@ -116,6 +120,7 @@ function readJson(callback) {
             markers.push(comment);
         });
         callback();
+        showCategorization();
     });
 }
 
@@ -132,7 +137,7 @@ readJson(function() {
         counters[markers[i].type]++;
     }
     totalComment = markers.length;
-    showCategorization()
+
 });
 
 
@@ -164,10 +169,10 @@ function showCategorization() {
 
 function initialization() {
 
-     var $radios = $('input:radio[name=comment-type]');
-     if ($radios.is(':checked') === false) {
-         $radios.filter('[value=time]').prop('checked', true);
-     }
+    var $radios = $('input:radio[name=comment-type]');
+    if ($radios.is(':checked') === false) {
+        $radios.filter('[value=all]').prop('checked', true);
+    }
 
     $("#appreciation-checked").prop("checked", true);
     $("#suggestion-checked").prop("checked", true);
@@ -192,13 +197,94 @@ function checkboxDisable(flag) {
 
 }
 
+// function startTimer() {
+//     running = true
+//     now = new Date()
+//     now = now.getTime()
+//         // change last multiple for the number of minutes
+//     endTime = now + (1000 * 60 * 5)
+//     showCountDown()
+// }
+
+// function showCountDown() {
+//     var now = new Date()
+//     now = now.getTime()
+//     if (endTime - now <= 0) {
+//         stopTimer()
+
+//         alert("Time is up.")
+//     } else {
+//         var delta = new Date(endTime - now)
+//         var theMin = delta.getMinutes()
+//         var theSec = delta.getSeconds()
+//         var theTime = theMin
+//         theTime += ((theSec < 10) ? ":0" : ":") + theSec
+//             //document.forms[0].timerDisplay.value = theTime
+//         $('#timeDisplay').text(theTime);
+
+//         if (running) {
+//             timerID = setTimeout(showCountDown, 1000)
+//         }
+//     }
+// }
+
+// function stopTimer() {
+//     clearTimeout(timerID)
+//     running = false
+//     var now = new Date()
+//     now = now.getTime()
+//     var requiredTime = 300 - (endTime - now) / 1000;
+
+//     var send = JSON.stringify({
+//         participantId: 1,
+//         system: "categorization",
+//         video: "two",
+//         task: 1,
+//         time: requiredTime,
+//         //answers: answerList.join(' ')
+//     });
+//     //console.log(requiredTime+" "+answerList);
+//     $.ajax({
+//         url: '/saveLog',
+//         type: 'POST',
+//         data: send,
+//         contentType: "application/json",
+//         dataType: 'json',
+//         success: function(response) {
+//             console.log(response);
+//         },
+//         error: function(error) {
+//             console.log(error);
+//         }
+//     });
+
+// }
+
+//         function timeActivity() {
+
+//             $("#startTimeButton").click(function() {
+
+//                 //alert("start timer");
+//                 startTimer();
+
+//             });
+
+//             $("#submitAnswerButton").click(function() {
+
+//                 stopTimer();
+
+//             });
+
+//         }
+
+
 $(document).ready(function() {
 
     initialization();
 
     showCategorization();
 
-    //checkboxDisable(true);
+    checkboxDisable(true);
 
     $("#content-highlight").click(function() {
 
@@ -359,19 +445,18 @@ $("input:radio[name=comment-type]").click(function(e) {
 
     var value = $(this).val();
 
-    // if (value != "all") {
-    //     checkboxDisable(false);
+    if (value != "all") {
+        checkboxDisable(false);
 
-    // } else {
-    //     checkboxDisable(true);
-    //     $("#appreciation-checked").prop("checked", true);
-    //     $("#suggestion-checked").prop("checked", true);
-    //     $("#question-checked").prop("checked", true);
-    //     $("#troubleshooting-checked").prop("checked", true);
-    //     $("#link-checked").prop("checked", true);
-    //     player.markers.total(true, $('input[name="comment-type"]:checked').val());
-    // }
-    // 
+    } else {
+        checkboxDisable(true);
+        $("#appreciation-checked").prop("checked", true);
+        $("#suggestion-checked").prop("checked", true);
+        $("#question-checked").prop("checked", true);
+        $("#troubleshooting-checked").prop("checked", true);
+        $("#link-checked").prop("checked", true);
+        player.markers.total(true, $('input[name="comment-type"]:checked').val());
+    }
     player.markers.radioButtonClickAction(value);
 
 })
