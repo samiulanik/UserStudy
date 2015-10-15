@@ -284,7 +284,7 @@ $(document).ready(function() {
 
     showCategorization();
 
-    checkboxDisable(true);
+    //checkboxDisable(true);
 
     $("#content-highlight").click(function() {
 
@@ -446,10 +446,10 @@ $("input:radio[name=comment-type]").click(function(e) {
     var value = $(this).val();
 
     if (value != "all") {
-        checkboxDisable(false);
+        //checkboxDisable(false);
 
     } else {
-        checkboxDisable(true);
+        //checkboxDisable(true);
         $("#appreciation-checked").prop("checked", true);
         $("#suggestion-checked").prop("checked", true);
         $("#question-checked").prop("checked", true);

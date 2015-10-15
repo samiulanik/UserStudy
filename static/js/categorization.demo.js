@@ -1152,19 +1152,40 @@
 
                 commentContainer.empty();
 
-                commentContainer.empty();
+                //commentContainer.empty();
+
+
+                // for (var i = 0; i < commentList.length; i++) {
+
+
+                //     commentContainer.append("<li class ='vjs-comment-list' id='" + commentList[i].key + "' style='border-right:" + colorList[commentList[i].type] + " solid 5px;'>" + "<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "</div></div></div></li>")
+                //     commentContainer.css({
+                //         "visibility": 'visible',
+                //     });
+
+
+                // }
+
+                var counter = 0;
+                for (var i = 0; i < commentList.length; i++) {
+
+                    if ($.inArray(commentList[i].type, checkTrueList) != -1) {
+                        counter++
+                    }
+                }
 
                 commentContainer.append("All Comments (" + commentList.length + ") <br><br><br>")
 
                 for (var i = 0; i < commentList.length; i++) {
 
+                    if ($.inArray(commentList[i].type, checkTrueList) != -1) {
+                        commentContainer.append("<li class ='vjs-comment-list' id='" + commentList[i].key + "' style='border-right:" + colorList[commentList[i].type] + " solid 5px;'>" + "<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "</div></div></div></li>")
+                        commentContainer.css({
+                            "visibility": 'visible',
+                        });
 
-                    commentContainer.append("<li class ='vjs-comment-list' id='" + commentList[i].key + "' style='border-right:" + colorList[commentList[i].type] + " solid 5px;'>" + "<div class='l-media'>" + "<div class='l-media__figure'>" + "<div class = 'comment-profile-pic'>" + "</div>" + "</div>" + "<div class='l-media__body'>" + "<div class = 'comment-user-name'>" + commentList[i].userName + "</div>" + "<div class = 'comment-id'>" + commentList[i].commentId + "</div>" + "<div class='.vjs-bottom-comment-list'>" + commentList[i].text + "</div></div></div></li>")
-                    commentContainer.css({
-                        "visibility": 'visible',
-                    });
 
-
+                    }
                 }
 
             } else if (option == "general") {
@@ -1257,10 +1278,8 @@
         player.markers = {
             checkboxClickAction: function(type, checked, timeType) {
 
-                if (timeType == "all")
-                    checkList[type] = checked;
 
-                else if (timeType == "time") {
+                if (timeType == "time") {
 
                     checkList[type] = checked;
                     removeMarkers();
@@ -1281,9 +1300,9 @@
                     checkList[type] = checked;
                     removeMarkers();
                     getCheckedList();
-                    findMarkerPositions();
-                    addMarkerPosition();
-                    commentClick();
+                    //findMarkerPositions();
+                    //addMarkerPosition();
+                    //commentClick();
                     displaySideCommentSection(timeType);
 
 
@@ -1293,24 +1312,37 @@
 
             total: function(checked, timeType) {
 
-                if (timeType == "all") {
 
+             if(timeType=="all"){
+
+                
                     if (checked) {
 
                         for (var key in checkList) {
                             checkList[key] = true;
                         }
+                        removeMarkers();
+                        getCheckedList();
+                        //findMarkerPositions();
+                        //addMarkerPosition();
+                        //displayBottomCommentSection();
+                        //commentClick();
+                        displaySideCommentSection("all")
                     } else {
-
                         for (var key in checkList) {
                             checkList[key] = false;
                         }
-
+                        removeMarkers();
 
                     }
 
 
-                } else if (timeType == "general"){
+
+             } 
+
+
+
+              else  if (timeType == "general"){
 
                     if (checked) {
 
@@ -1379,9 +1411,9 @@
                     commentClick();
 
                 } else if (value == "all") {
-                    removeMarkers();
-                    getCheckedList();
-                    //findMarkerPositions();
+                    // removeMarkers();
+                    // getCheckedList();
+                    // //findMarkerPositions();
                     //addMarkerPosition();
                     // commentClick();
                     displaySideCommentSection(value);
